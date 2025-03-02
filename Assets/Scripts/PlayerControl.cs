@@ -7,7 +7,7 @@ using Vector2 = UnityEngine.Vector2;
 public class PlayerControl : MonoBehaviour
 {
     Rigidbody2D rgbd2d;
-    [SerializeField] Vector2 jumpSpeed = new Vector2(0f, 15f);
+    [SerializeField] Vector2 jumpSpeed = new Vector2(0f, 10f);
     void Start()
     {
         rgbd2d = GetComponent<Rigidbody2D>();
@@ -21,6 +21,7 @@ public class PlayerControl : MonoBehaviour
 
     public void OnJump()
     {
+        GetComponent<AudioSource>().Play();
         rgbd2d.velocity = jumpSpeed;
     }
 }
