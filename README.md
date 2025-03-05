@@ -4,15 +4,17 @@
 ---
 ### Mechanics + Techniques
 
-- Cinemachine Virtual Camera
-- Cinemachine Confiner
-- Cinemachine Impulse Listener + Cinemachine Impulse Source
+- New Input System
+- Cinemachine (Virtual Camera + Confiner + Impulse)
 - Trail Renderer
+- Audio Mixer
 - Texture + Shader + Material
 - Particle Effect
 - Unity UI tookit
-- Design Pattern / Game Programming Pattern: Singleton
-
+- Design Pattern / Game Programming Pattern: Singleton, Object Pool
+- Unity Ads
+- Save & Loading System
+- Localization
 
 ### Ongoing features
 
