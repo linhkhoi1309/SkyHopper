@@ -12,9 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52dddbbcacd2e1c4ab23c33add7c329d, type: 3}
   m_Name: Path_1
   m_EditorClassIdentifier: 
-  waypointsPositions: []
+  waypointsPositions:
+  - {x: 5.72, y: 12.4800005, z: 0.38465396}
+  - {x: 3.58, y: 13.97, z: 0.38465396}
+  - {x: 1, y: 15.77, z: 0.38465396}
+  - {x: -1.5699999, y: 17.44, z: 0.38465396}
+  - {x: -4.3199997, y: 18.89, z: 0.38465396}
+  - {x: -6.72, y: 20.51, z: 0.38465396}
   gameObjectArray:
   - {fileID: 7745825553858620592, guid: 12e9150a7cf46c245b94ee594f413328, type: 3}
-  minSpeed: 5
+  minSpeed: 10
   maxSpeed: 10
-  interval: 5
+  interval: 0.4
