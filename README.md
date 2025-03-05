@@ -10,7 +10,6 @@
 - Trail Renderer
 - Texture + Shader + Material
 - Particle Effect
-- Profiler
 - Unity UI tookit
 - Design Pattern / Game Programming Pattern: Singleton
 
