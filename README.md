@@ -4,10 +4,12 @@
 ---
 ### Mechanics + Techniques
 
+- Universal Render Pipeline (URP)
 - New Input System
 - Cinemachine (Virtual Camera + Confiner + Impulse)
 - Trail Renderer
 - Particle Effect
+- Post-processing (Bloom)
 - Texture + Shader + Material
 - Unity UI tookit
 - Save & Loading System
