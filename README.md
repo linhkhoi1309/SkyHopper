@@ -8,13 +8,13 @@
 - Cinemachine (Virtual Camera + Confiner + Impulse)
 - Trail Renderer
 - Particle Effect
-- Design Pattern / Game Programming Pattern: Singleton, Object Pool
 - Texture + Shader + Material
-- Profiler
 - Unity UI tookit
-- Audio Mixer
-- Unity Ads
 - Save & Loading System
+- Audio Mixer
+- Profiler
+- Design Pattern / Game Programming Pattern: Singleton, Object Pool
+- Unity Ads
 - Localization
 
 ### Ongoing features
