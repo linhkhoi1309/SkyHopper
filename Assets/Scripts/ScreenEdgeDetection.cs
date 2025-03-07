@@ -29,9 +29,7 @@ public class ScreenEdgeDetection : MonoBehaviour
                         player.playerControl.DisableControl();
                         player.hasLost = true;
                     } else {
-                        if(!player.particleSystem.isPlaying){
-                            Destroy(target, 0.2f);
-                        }
+                        Destroy(target, 0.1f);
                     }
                 }
             }
