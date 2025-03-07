@@ -28,8 +28,9 @@ public class ScreenEdgeDetection : MonoBehaviour
                         player.particleSystem.Play();
                         player.playerControl.DisableControl();
                         player.hasLost = true;
+                        AudioSource.PlayClipAtPoint(player.crashedSFX, Camera.main.transform.position, 1f);
                     } else {
-                        Destroy(target, 0.1f);
+                        Destroy(target, 0.2f);
                     }
                 }
             }

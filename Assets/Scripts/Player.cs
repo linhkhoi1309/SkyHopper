@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
 
     [HideInInspector] public bool hasLost = false;
 
+    public AudioClip crashedSFX;
+
     private void Awake() {
         cinemachineImpulseSource = GetComponent<CinemachineImpulseSource>();
         particleSystem = GetComponent<ParticleSystem>();
