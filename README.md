@@ -7,11 +7,12 @@
 - New Input System
 - Cinemachine (Virtual Camera + Confiner + Impulse)
 - Trail Renderer
-- Audio Mixer
-- Texture + Shader + Material
 - Particle Effect
-- Unity UI tookit
 - Design Pattern / Game Programming Pattern: Singleton, Object Pool
+- Texture + Shader + Material
+- Profiler
+- Unity UI tookit
+- Audio Mixer
 - Unity Ads
 - Save & Loading System
 - Localization
