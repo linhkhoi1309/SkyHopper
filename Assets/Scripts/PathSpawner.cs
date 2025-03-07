@@ -25,9 +25,12 @@ public class PathSpawner : MonoBehaviour
     {
         while (true)
         {
-            GameObject pathObject = Instantiate(pathSO.gameObjectArray[0], pathSO.waypointsPositions[0], Quaternion.identity, transform);
-            pathObject.GetComponent<PathMovement>().pathSO = pathSO;
-            yield return new WaitForSeconds(pathSO.interval);
+            foreach (GameObject pathObjectPrefab in pathSO.gameObjectArray)
+            {
+                GameObject pathObject = Instantiate(pathObjectPrefab, pathSO.waypointsPositions[0], Quaternion.identity, transform);
+                pathObject.GetComponent<PathMovement>().pathSO = pathSO;
+                yield return new WaitForSeconds(pathSO.interval);
+            }
         }
     }
 }
