@@ -4,15 +4,14 @@
 ---
 ### Key Mechanics + Techniques
 
-- Universal Render Pipeline (URP)
+- Scriptable Render Pipeline (URP)
 - New Input System
 - Cinemachine (Virtual Camera + Confiner + Impulse)
 - Trail Renderer + Line Renderer
-- Mesh Collider
-- Raycast
+- Edge Collider
 - Particle Effect
 - Post-processing (Bloom)
-- Texture + Shader + Material
+- Texture + Shader + Material (Physics + Unlit)
 - Unity UI tookit
 - Save & Loading System
 - Audio Mixer
@@ -22,4 +21,6 @@
 - Localization
 
 ### Ongoing features
+- Raycast
+- Addressable
 
