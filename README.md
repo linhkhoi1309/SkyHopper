@@ -7,14 +7,14 @@
 - Universal Render Pipeline (URP)
 - New Input System
 - Cinemachine (Virtual Camera + Confiner + Impulse)
-- Trail Renderer
+- Trail Renderer + Line Renderer
 - Particle Effect
 - Post-processing (Bloom)
 - Texture + Shader + Material
 - Unity UI tookit
 - Save & Loading System
 - Audio Mixer
-- Profiler
+- Profiler + Optimization Techniques
 - Design Pattern / Game Programming Pattern: Singleton, Object Pool
 - Unity Ads
 - Localization

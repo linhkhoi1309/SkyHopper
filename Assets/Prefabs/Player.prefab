@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a6c5673a98c8434aaf850c8aadd6bbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: {x: 0, y: 7}
+  jumpSpeed: {x: 0, y: 6}
   isControlAllowed: 1
 --- !u!50 &5735973035100353829
 Rigidbody2D:
@@ -163,7 +163,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &7622494711075140053
 CircleCollider2D:
