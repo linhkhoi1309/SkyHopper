@@ -27,16 +27,23 @@ public class PathMovement : MonoBehaviour
 
     IEnumerator MovePathRoutine()
     {
-        while (currentWaypoint < waypointsPositions.Count)
-        {   transform.position = Vector3.MoveTowards(transform.position, waypointsPositions[currentWaypoint], speed * Time.deltaTime);
+        bool isReversed = false;
+        while (currentWaypoint < waypointsPositions.Count || pathSO.isLooping)
+        {   
+            transform.position = Vector3.MoveTowards(transform.position, waypointsPositions[currentWaypoint % waypointsPositions.Count], speed * Time.deltaTime);
             if (Vector3.Distance(transform.position, waypointsPositions[currentWaypoint]) < 0.1f)
             {
+                if(pathSO.isLooping && (currentWaypoint == waypointsPositions.Count - 1 || currentWaypoint == 0))
+                {
+                    isReversed = true;
+                }
                 transform.position = waypointsPositions[currentWaypoint];
-                currentWaypoint++;
+                if(!isReversed) currentWaypoint++;
+                else currentWaypoint--;
             }
             yield return null;
         }
-        Destroy(gameObject);
+        if(!pathSO.isLooping) Destroy(gameObject);
     }
     private float GetPathSpeed()
     {

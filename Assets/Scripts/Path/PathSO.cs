@@ -10,6 +10,7 @@ public class PathSO : ScriptableObject
     public float minSpeed;
     public float maxSpeed;
     public float interval;
+    public bool isLooping = false;
 
     public void InitializeWaypointsPositions(List<Transform> waypointsTransforms){
         waypointsPositions.Clear();
