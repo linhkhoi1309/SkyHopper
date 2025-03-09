@@ -30,12 +30,13 @@ public class PathMovement : MonoBehaviour
         bool isReversed = false;
         while (currentWaypoint < waypointsPositions.Count || pathSO.isLooping)
         {   
-            transform.position = Vector3.MoveTowards(transform.position, waypointsPositions[currentWaypoint % waypointsPositions.Count], speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, waypointsPositions[currentWaypoint], speed * Time.deltaTime);
             if (Vector3.Distance(transform.position, waypointsPositions[currentWaypoint]) < 0.1f)
             {
-                if(pathSO.isLooping && (currentWaypoint == waypointsPositions.Count - 1 || currentWaypoint == 0))
+                if(pathSO.isLooping)
                 {
-                    isReversed = true;
+                    if(currentWaypoint == waypointsPositions.Count - 1) isReversed = true;
+                    if(currentWaypoint == 0) isReversed = false;
                 }
                 transform.position = waypointsPositions[currentWaypoint];
                 if(!isReversed) currentWaypoint++;
