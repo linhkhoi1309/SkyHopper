@@ -10,7 +10,6 @@ public class CircleObstacle : MonoBehaviour
     [SerializeField] private float radius = 1.5f;
     [SerializeField] private int steps = 100;
     [SerializeField] private float gapSizePercent = 0.2f;
-    [SerializeField] private float spinSpeed = 40f;
 
     List<Vector2> colliderPoints = new List<Vector2>();
 
@@ -41,10 +40,5 @@ public class CircleObstacle : MonoBehaviour
             colliderPoints.Add(new Vector2(x, y));
         }
         edgeCollider.SetPoints(colliderPoints);
-    }
-
-    private void Update()
-    {
-        transform.Rotate(0f, 0f, Time.deltaTime * spinSpeed);
     }
 }

@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
 
     [HideInInspector] public bool hasLost = false;
 
+    [SerializeField] public bool isTestMode = false;
+
     public AudioClip crashedSFX;
 
     private void Awake() {
@@ -20,4 +22,6 @@ public class Player : MonoBehaviour
         particleSystem = GetComponent<ParticleSystem>();
         playerControl = GetComponent<PlayerControl>();
     }
+
+    
 }
