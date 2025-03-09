@@ -1769,9 +1769,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1220169764929131892, guid: ed175fc6542e5314f89c87ff5c395a16, type: 3}
+      propertyPath: m_Size.x
+      value: 0.85
+      objectReference: {fileID: 0}
     - target: {fileID: 3501293202073399975, guid: ed175fc6542e5314f89c87ff5c395a16, type: 3}
       propertyPath: m_Name
       value: Fan
+      objectReference: {fileID: 0}
+    - target: {fileID: 6915733956122692245, guid: ed175fc6542e5314f89c87ff5c395a16, type: 3}
+      propertyPath: m_Size.x
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 8403574387749219423, guid: ed175fc6542e5314f89c87ff5c395a16, type: 3}
       propertyPath: spinSpeed
