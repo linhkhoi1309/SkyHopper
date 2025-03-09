@@ -11,6 +11,8 @@
 - Edge Collider
 - Particle Effect
 - Post-processing (Bloom)
+- Hinge Joint 2D
+- Skinning Editor
 - Texture + Shader + Material (Physics + Unlit)
 - Unity UI tookit
 - Save & Loading System
