@@ -10,18 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52dddbbcacd2e1c4ab23c33add7c329d, type: 3}
-  m_Name: Path_0
+  m_Name: Path_2
   m_EditorClassIdentifier: 
   waypointsPositions:
-  - {x: 6.1299996, y: 7.3600006, z: 0.38465396}
-  - {x: 3.9899998, y: 8.85, z: 0.38465396}
-  - {x: 1.41, y: 10.650001, z: 0.38465396}
-  - {x: -1.1600001, y: 12.320001, z: 0.38465396}
-  - {x: -3.9099998, y: 13.77, z: 0.38465396}
-  - {x: -6.31, y: 15.39, z: 0.38465396}
+  - {x: -2.78, y: 24.31, z: 0}
+  - {x: 4.13, y: 24.31, z: 0}
   gameObjectArray:
-  - {fileID: 7745825553858620592, guid: 12e9150a7cf46c245b94ee594f413328, type: 3}
+  - {fileID: 7745825553858620592, guid: fd4f0ca900b802641aca17ba838c0806, type: 3}
   minSpeed: 10
   maxSpeed: 10
-  interval: 0.4
-  isLooping: 0
+  interval: 0
+  pingPong: 1
+  infiniteSpawning: 0
+  maxSpawnedObjects: 1

@@ -28,12 +28,12 @@ public class PathMovement : MonoBehaviour
     IEnumerator MovePathRoutine()
     {
         bool isReversed = false;
-        while (currentWaypoint < waypointsPositions.Count || pathSO.isLooping)
+        while (currentWaypoint < waypointsPositions.Count || pathSO.pingPong)
         {   
             transform.position = Vector3.MoveTowards(transform.position, waypointsPositions[currentWaypoint], speed * Time.deltaTime);
             if (Vector3.Distance(transform.position, waypointsPositions[currentWaypoint]) < 0.1f)
             {
-                if(pathSO.isLooping)
+                if(pathSO.pingPong)
                 {
                     if(currentWaypoint == waypointsPositions.Count - 1) isReversed = true;
                     if(currentWaypoint == 0) isReversed = false;
@@ -44,7 +44,7 @@ public class PathMovement : MonoBehaviour
             }
             yield return null;
         }
-        if(!pathSO.isLooping) Destroy(gameObject);
+        if(!pathSO.pingPong) Destroy(gameObject);
     }
     private float GetPathSpeed()
     {

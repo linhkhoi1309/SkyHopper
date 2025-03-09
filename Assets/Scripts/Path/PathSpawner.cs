@@ -23,12 +23,15 @@ public class PathSpawner : MonoBehaviour
     }
     private IEnumerator SpawnPathObjectRoutine(PathSO pathSO)
     {
-        while (true)
+        int spawnedObjects = 0;
+        while (pathSO.infiniteSpawning || (!pathSO.infiniteSpawning && spawnedObjects < pathSO.maxSpawnedObjects))
         {
             foreach (GameObject pathObjectPrefab in pathSO.gameObjectArray)
             {
-                GameObject pathObject = Instantiate(pathObjectPrefab, pathSO.waypointsPositions[0], Quaternion.identity, transform);
+                GameObject pathObject = Instantiate(pathObjectPrefab, pathSO.waypointsPositions[0], pathObjectPrefab.transform.rotation, transform);
                 pathObject.GetComponent<PathMovement>().pathSO = pathSO;
+                spawnedObjects++;
+                if(!pathSO.infiniteSpawning && spawnedObjects == pathSO.maxSpawnedObjects) break;
                 yield return new WaitForSeconds(pathSO.interval);
             }
         }
