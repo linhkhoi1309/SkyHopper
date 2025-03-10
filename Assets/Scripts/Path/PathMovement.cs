@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-
+[DisallowMultipleComponent]
 public class PathMovement : MonoBehaviour
 {
     [HideInInspector]public PathSO pathSO;

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(LineRenderer), typeof(EdgeCollider2D))]
+[DisallowMultipleComponent]
 public class CircleObstacle : MonoBehaviour
 {
     LineRenderer circleRenderer;

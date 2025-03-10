@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 
+[DisallowMultipleComponent]
 [RequireComponent(typeof(PlayerControl))]
 public class Player : MonoBehaviour
 {

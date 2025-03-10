@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 
+[DisallowMultipleComponent]
 public class ScreenEdgeDetection : MonoBehaviour
 {
     [SerializeField] GameObject target;

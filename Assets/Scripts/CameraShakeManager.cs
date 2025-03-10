@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 
+[DisallowMultipleComponent]
 public class CameraShakeManager : MonoBehaviour
 {
     public static CameraShakeManager instance;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[DisallowMultipleComponent]
 public class ObstacleSpinner : MonoBehaviour
 {
    [SerializeField] private float spinSpeed = 40f;

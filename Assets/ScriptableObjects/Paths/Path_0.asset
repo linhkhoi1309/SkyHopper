@@ -24,4 +24,6 @@ MonoBehaviour:
   minSpeed: 10
   maxSpeed: 10
   interval: 0.4
-  isLooping: 0
+  pingPong: 0
+  infiniteSpawning: 1
+  maxSpawnedObjects: 0

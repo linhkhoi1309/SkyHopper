@@ -9,7 +9,9 @@ public class PathSO : ScriptableObject
     public  GameObject[] gameObjectArray;
     public float minSpeed;
     public float maxSpeed;
-    public float interval;
+    [Min(0f)] public float interval;
+
+    [Tooltip("If true, the path will move back and forth")]
     public bool pingPong = false;
     public bool infiniteSpawning = true;
     public int maxSpawnedObjects;
