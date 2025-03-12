@@ -40,6 +40,7 @@ public class PathMovement : MonoBehaviour
                 transform.position = waypointsPositions[currentWaypoint];
                 if (!isReversed) currentWaypoint++;
                 else currentWaypoint--;
+                yield return new WaitForSeconds(pathSO.delayTime);
             }
             yield return null;
         }

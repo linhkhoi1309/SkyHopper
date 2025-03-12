@@ -9,6 +9,8 @@ public class PathSO : ScriptableObject
     public  GameObject[] gameObjectArray;
     public float minSpeed;
     public float maxSpeed;
+    [Tooltip("Delay time before going to the next waypoint")]
+    public float delayTime;
     [Min(0f)] public float interval;
 
     [Tooltip("If true, the path will move back and forth")]
