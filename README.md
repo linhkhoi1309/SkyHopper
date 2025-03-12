@@ -16,13 +16,13 @@
 - Joint (Hinge Joint 2D)
 - Effector (Area Effector 2D)
 - Skinning Editor
+- Design Pattern / Game Programming Pattern: Singleton, Object Pool
+- Optimization Techniques (Profiler)
 - Texture + Shader + Material
 - Scene Transition
 - UI (Unity UI tookit + Unity UI)
 - Save & Loading System
 - Audio Mixer
-- Optimization Techniques (Profiler)
-- Design Pattern / Game Programming Pattern: Singleton, Object Pool
 - Unity Ads + In-App purchase
 - Push Notifications
 - Vibration

@@ -39,17 +39,33 @@ public class Shooter : MonoBehaviour
         while (true)
         {
             Quaternion targetRotation = GetRandomRotation();
-            while (Quaternion.Angle(targetRotation, transform.rotation) >= 0.1f)
+            while (Quaternion.Angle(targetRotation, rotationPoint.transform.rotation) >= 0.1f)
             {
                 float step = rotateSpeed * Time.deltaTime;
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, step);
+                rotationPoint.transform.rotation = Quaternion.RotateTowards(rotationPoint.transform.rotation, targetRotation, step);
                 yield return null;
             }
+            StartCoroutine(ShootAmmoRoutine());
             yield return new WaitForSeconds(intervalBetweenTurns);
+        }
+    }
+    IEnumerator ShootAmmoRoutine()
+    {
+        for (int i = 0; i < numberOfConcurrentShots; i++)
+        {
+            GameObject ammo = ObjectPoolManager.instance.SpawnFromPool(ammoPrefab.tag, shootingPoint.transform.position, rotationPoint.transform.rotation);
+            ammo.GetComponent<Ammo>().Move(shootingPoint.transform.position, GetDirectionVectorFromAngle(rotationPoint.transform.eulerAngles.z));
+            yield return new WaitForSeconds(intervalBetweenShots);
         }
     }
     Quaternion GetRandomRotation()
     {
         return Quaternion.Euler(0f, 0f, Random.Range(minAngle, maxAngle));
+    }
+
+    public Vector3 GetDirectionVectorFromAngle(float angle)
+    {
+        Vector3 directionVector = new Vector3(Mathf.Cos(Mathf.Deg2Rad * angle), Mathf.Sin(Mathf.Deg2Rad * angle), 0f);
+        return directionVector;
     }
 }

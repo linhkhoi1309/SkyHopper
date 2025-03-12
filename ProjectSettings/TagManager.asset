@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ammo
+  - PathObj_Triangle
+  - PathObj_HorizontalCapsule
   layers:
   - Default
   - TransparentFX

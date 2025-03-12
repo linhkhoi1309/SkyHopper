@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: -3873660392040320486}
   - component: {fileID: 5928881606747613388}
   - component: {fileID: 5868303249583490366}
+  - component: {fileID: 1722555654885948639}
   m_Layer: 0
   m_Name: Ammo
-  m_TagString: Untagged
+  m_TagString: Ammo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,3 +146,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammoSpeed: 10
   ammoRange: 5
+--- !u!114 &1722555654885948639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6801923149617864279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d93b4468d272d9744b36bbf6da48c4e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
