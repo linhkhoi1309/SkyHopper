@@ -7,44 +7,43 @@ using Random = UnityEngine.Random;
 [DisallowMultipleComponent]
 public class PathMovement : MonoBehaviour
 {
-    [HideInInspector]public PathSO pathSO;
+    [HideInInspector] PathSO pathSO;
     private float speed;
 
     List<Vector3> waypointsPositions;
 
-    int currentWaypoint = 0;
+    int currentWaypoint;
 
-    private void Start()
+    public void MovePath(PathSO pathSO)
     {
-        if (pathSO != null)
-        {
-            waypointsPositions = pathSO.waypointsPositions;
-            speed = GetPathSpeed();
-            transform.position = waypointsPositions[currentWaypoint];
-            StartCoroutine(MovePathRoutine());
-        }
+        this.pathSO = pathSO;
+        currentWaypoint = 0;
+        waypointsPositions = pathSO.waypointsPositions;
+        speed = GetPathSpeed();
+        transform.position = waypointsPositions[currentWaypoint];
+        StartCoroutine(MovePathRoutine());
     }
 
     IEnumerator MovePathRoutine()
     {
         bool isReversed = false;
         while (currentWaypoint < waypointsPositions.Count || pathSO.pingPong)
-        {   
+        {
             transform.position = Vector3.MoveTowards(transform.position, waypointsPositions[currentWaypoint], speed * Time.deltaTime);
             if (Vector3.Distance(transform.position, waypointsPositions[currentWaypoint]) < 0.1f)
             {
-                if(pathSO.pingPong)
+                if (pathSO.pingPong)
                 {
-                    if(currentWaypoint == waypointsPositions.Count - 1) isReversed = true;
-                    if(currentWaypoint == 0) isReversed = false;
+                    if (currentWaypoint == waypointsPositions.Count - 1) isReversed = true;
+                    if (currentWaypoint == 0) isReversed = false;
                 }
                 transform.position = waypointsPositions[currentWaypoint];
-                if(!isReversed) currentWaypoint++;
+                if (!isReversed) currentWaypoint++;
                 else currentWaypoint--;
             }
             yield return null;
         }
-        if(!pathSO.pingPong) Destroy(gameObject);
+        if (!pathSO.pingPong) ObjectPoolManager.instance.ReturnToPool(gameObject.tag, gameObject);
     }
     private float GetPathSpeed()
     {

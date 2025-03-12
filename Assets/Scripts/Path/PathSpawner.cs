@@ -29,8 +29,8 @@ public class PathSpawner : MonoBehaviour
         {
             foreach (GameObject pathObjectPrefab in pathSO.gameObjectArray)
             {
-                GameObject pathObject = Instantiate(pathObjectPrefab, pathSO.waypointsPositions[0], pathObjectPrefab.transform.rotation, transform);
-                pathObject.GetComponent<PathMovement>().pathSO = pathSO;
+                GameObject pathObj = ObjectPoolManager.instance.SpawnFromPool(pathObjectPrefab.tag, pathSO.waypointsPositions[0], pathObjectPrefab.transform.rotation);
+                pathObj.GetComponent<PathMovement>().MovePath(pathSO);
                 spawnedObjects++;
                 if(!pathSO.infiniteSpawning && spawnedObjects == pathSO.maxSpawnedObjects) break;
                 yield return new WaitForSeconds(pathSO.interval);

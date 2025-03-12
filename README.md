@@ -17,10 +17,10 @@
 - Effector (Area Effector 2D)
 - Skinning Editor
 - Design Pattern / Game Programming Pattern: Singleton, Object Pool
+- UI (Unity UI tookit + Unity UI)
 - Optimization Techniques (Profiler)
 - Texture + Shader + Material
 - Scene Transition
-- UI (Unity UI tookit + Unity UI)
 - Save & Loading System
 - Audio Mixer
 - Unity Ads + In-App purchase
@@ -31,7 +31,6 @@
 ### Ongoing features
 - Raycast
 - Addressable
-
 
 ### Notes
 

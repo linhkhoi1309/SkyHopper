@@ -56,7 +56,10 @@ public class ObjectPoolManager : MonoBehaviour
 
     public void ReturnToPool(string tag, GameObject obj)
     {
-        obj.SetActive(false);
-        poolDictionary[tag].Enqueue(obj);
+        if (poolDictionary.ContainsKey(tag))
+        {
+            obj.SetActive(false);
+            poolDictionary[tag].Enqueue(obj);
+        } else Debug.LogError("No pool found with " + tag);
     }
 }
