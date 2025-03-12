@@ -38,18 +38,3 @@
     + Sprite Editor -> Skinning Editor -> Create Bones -> Auto Geometry -> Generate For Selected
     + Create Chain object -> Assign Sprite Skin component -> Create bones -> Assign Hinge Joint 2D component for each children bone object -> Assign its connected rigidbody (in Hinge Joint 2D component) for each bone consecutively -> Bone_0 assign with an Anchor object
     + Tuning for better effect (Rigidbody's mass, Hinge Joint 2D's Angle limits)
-
-- Common Attributes:
-    + System.Serializable✅
-    + SerializeField ✅
-    + ColorUsage(showAlpha = true, hdr = true)
-    + GradientUsage(hdr = true)
-    + HideInInspector ✅
-    + Min(min) ✅
-    + Range(min, max)
-    + Header(header) 
-    + Space(height (in pixels))
-    + Tooltip(tooltip)✅
-    + TextArea(minLines, maxLines)
-    + RequireComponent(typeof(Component))✅
-    + DisallowMultipleComponent✅
