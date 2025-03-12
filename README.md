@@ -2,24 +2,30 @@
 
 #### This game is served for ***educational purposes*** only. Please contact to *linhkhoiluong@gmail.com* before using it as references.
 ---
-### Key Mechanics + Techniques
+### Mechanics + Techniques
 
+- Version Control (Git)
 - Scriptable Render Pipeline (URP)
 - New Input System
 - Cinemachine (Virtual Camera + Confiner + Impulse)
-- Trail Renderer + Line Renderer
-- Edge Collider
+- Renderer (Trail + Line + Sprite)
+- Rigidbody 2D
+- Collider (Edge + Circle + Box + Polygon + Capsule)
 - Particle Effect
 - Post-processing (Bloom)
-- Hinge Joint 2D
+- Joint (Hinge Joint 2D)
+- Effector (Area Effector 2D)
 - Skinning Editor
 - Texture + Shader + Material
-- Unity UI tookit
+- Scene Transition
+- UI (Unity UI tookit + Unity UI)
 - Save & Loading System
 - Audio Mixer
-- Optimization Techniques
+- Optimization Techniques (Profiler)
 - Design Pattern / Game Programming Pattern: Singleton, Object Pool
-- Unity Ads + Monetization
+- Unity Ads + In-App purchase
+- Push Notifications
+- Vibration
 - Localization
 
 ### Ongoing features
