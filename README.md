@@ -18,6 +18,11 @@
 - Skinning Editor
 - Design Pattern / Game Programming Pattern: Singleton, Object Pool
 - UI (Unity UI tookit + Unity UI)
+- Addressable
+- Boids
+- Job System
+- Morton Code
+- Quadtree
 - Optimization Techniques (Profiler)
 - Texture + Shader + Material
 - Scene Transition
@@ -30,7 +35,6 @@
 
 ### Ongoing features
 - Raycast
-- Addressable
 
 ### Notes
 
@@ -38,3 +42,6 @@
     + Sprite Editor -> Skinning Editor -> Create Bones -> Auto Geometry -> Generate For Selected
     + Create Chain object -> Assign Sprite Skin component -> Create bones -> Assign Hinge Joint 2D component for each children bone object -> Assign its connected rigidbody (in Hinge Joint 2D component) for each bone consecutively -> Bone_0 assign with an Anchor object
     + Tuning for better effect (Rigidbody's mass, Hinge Joint 2D's Angle limits)
+- Script Execution Order:
+    + Edit -> Project Settings -> Script Excution Order
+    + Lower value -> more prioritized
