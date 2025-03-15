@@ -18,7 +18,6 @@
 - Skinning Editor
 - Design Pattern / Game Programming Pattern: Singleton, Object Pool
 - UI (Unity UI tookit + Unity UI)
-- Addressable
 - Boids
 - Job System
 - Morton Code
@@ -35,6 +34,7 @@
 
 ### Ongoing features
 - Raycast
+- Addressable
 
 ### Notes
 
@@ -45,3 +45,5 @@
 - Script Execution Order:
     + Edit -> Project Settings -> Script Excution Order
     + Lower value -> more prioritized
+
+### References

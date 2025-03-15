@@ -17,7 +17,7 @@ public class Obstacle : MonoBehaviour
         if (other.tag == "Player" && !player.hasLost)
         {
             CameraShakeManager.instance.ShakeCamera(player.cinemachineImpulseSource);
-            player.particleSystem.Play();
+            player.explosionParticleSystem.Play();
             player.playerControl.DisableControl();
             player.hasLost = true;
             AudioSource.PlayClipAtPoint(player.crashedSFX, Camera.main.transform.position, 1f);

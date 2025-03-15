@@ -8,21 +8,20 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [HideInInspector] public CinemachineImpulseSource cinemachineImpulseSource;
-    [HideInInspector] public ParticleSystem particleSystem;
+    
 
     [HideInInspector] public PlayerControl playerControl;
 
     [HideInInspector] public bool hasLost = false;
 
-    [SerializeField] public bool isTestMode = false;
-
     public AudioClip crashedSFX;
+
+    public ParticleSystem explosionParticleSystem;
+
+    public ParticleSystem shieldParticleSystem;
 
     private void Awake() {
         cinemachineImpulseSource = GetComponent<CinemachineImpulseSource>();
-        particleSystem = GetComponent<ParticleSystem>();
         playerControl = GetComponent<PlayerControl>();
     }
-
-    
 }

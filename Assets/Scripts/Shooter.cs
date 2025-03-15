@@ -18,8 +18,6 @@ public class Shooter : MonoBehaviour
 
     [SerializeField] float rotateSpeed;
 
-    [SerializeField] bool isMultiShots = false;
-
     [Tooltip("How many shots are shot at the same turn")]
     [SerializeField] int numberOfConcurrentShots = 1;
 

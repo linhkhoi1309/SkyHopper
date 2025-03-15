@@ -1261,7 +1261,6 @@ MonoBehaviour:
   intervalBetweenShots: 0.2
   intervalBetweenTurns: 0.6
   rotateSpeed: 7
-  isMultiShots: 1
   numberOfConcurrentShots: 3
   isLaserBeam: 0
   laserMaterial: {fileID: 0}
@@ -5177,6 +5176,14 @@ PrefabInstance:
     - target: {fileID: 7981256971686326368, guid: 3c6e4fc00b507c54183a7b45e426ff54, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309604798944903418, guid: 3c6e4fc00b507c54183a7b45e426ff54, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309604798944903418, guid: 3c6e4fc00b507c54183a7b45e426ff54, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4900400463155601505, guid: 3c6e4fc00b507c54183a7b45e426ff54, type: 3}
