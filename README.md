@@ -52,9 +52,9 @@
     + Create Shield Particle System (with only 1 particle generated and use Shield Material as material)
 
 ### References
-    - [SCREEN SHAKE in Unity using Cinemachine, Sasquatch B Studios] (https://www.youtube.com/watch?v=CgyLIWyDXqo&list=PLfmYNuLHEy-PQ6j6kki9kmM3Z5CayRSI0&index=4&ab_channel=SasquatchBStudios)
-    - [Unity Manual](https://docs.unity3d.com/6000.0/Documentation/Manual/)
-    - [Unity Universal RP Manual](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@7.1/manual/index.html)
-    - [OBJECT POOLING in Unity, Brackeys](https://www.youtube.com/watch?v=tdSmKaJvCoA&t=832s&ab_channel=Brackeys)
-    - [Get started with UI Toolkit in Unity, Sasquatch B Studios](https://www.youtube.com/watch?v=_jtj73lu2Ko&t=317s&ab_channel=SasquatchBStudios)
+- [SCREEN SHAKE in Unity using Cinemachine, Sasquatch B Studios](https://www.youtube.com/watch?v=CgyLIWyDXqo&list=PLfmYNuLHEy-PQ6j6kki9kmM3Z5CayRSI0&index=4&ab_channel=SasquatchBStudios)
+- [Unity Manual](https://docs.unity3d.com/6000.0/Documentation/Manual/)
+- [Unity Universal RP Manual](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@7.1/manual/index.html)
+- [OBJECT POOLING in Unity, Brackeys](https://www.youtube.com/watch?v=tdSmKaJvCoA&t=832s&ab_channel=Brackeys)
+- [Get started with UI Toolkit in Unity, Sasquatch B Studios](https://www.youtube.com/watch?v=_jtj73lu2Ko&t=317s&ab_channel=SasquatchBStudios)
     
