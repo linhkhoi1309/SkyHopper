@@ -35,7 +35,7 @@ public class PathMovement : MonoBehaviour
                 if (pathSO.pingPong)
                 {
                     if (currentWaypoint == waypointsPositions.Count - 1) isReversed = true;
-                    if (currentWaypoint == 0) isReversed = false;
+                    else if (currentWaypoint == 0) isReversed = false;
                 }
                 transform.position = waypointsPositions[currentWaypoint];
                 if (!isReversed) currentWaypoint++;

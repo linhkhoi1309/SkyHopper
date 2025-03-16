@@ -8,6 +8,7 @@ TagManager:
   - PathObj_Triangle
   - PathObj_HorizontalCapsule
   - PathObj_Wall
+  - SpaceShip
   layers:
   - Default
   - TransparentFX
