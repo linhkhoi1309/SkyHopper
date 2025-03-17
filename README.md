@@ -50,6 +50,11 @@
     ![Shield Shader Graph](https://private-user-images.githubusercontent.com/58393822/423108471-63b15c32-47fe-4a7a-b7bb-bd93186f7c02.PNG?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDIwNDY5MDMsIm5iZiI6MTc0MjA0NjYwMywicGF0aCI6Ii81ODM5MzgyMi80MjMxMDg0NzEtNjNiMTVjMzItNDdmZS00YTdhLWI3YmItYmQ5MzE4NmY3YzAyLlBORz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMTUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzE1VDEzNTAwM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWRmY2QwYzVkNGFmMzQxZmM0NDJjNjc3MDk2MWEwNDc1NzMyYzA1OWFiZGY1ODg0MzFmMmQ2MzkzMWQ5YjAwNzYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.z9vPiD_mI6X9PGv2k8X3i6G09wpziUykmuzE51Q7goA)
     + Create Shield Material
     + Create Shield Particle System (with only 1 particle generated and use Shield Material as material)
+- Lerp
+    + Used to move one value towards another over time such as animating movements, changing slider values or fading out audio source
+    + When t = 0, Vector3.Lerp(a, b, t) returns a.
+    + When t = 1, Vector3.Lerp(a, b, t) returns b.
+    + When t = 0.5, Vector3.Lerp(a, b, t) returns the point midway between a and b.
 
 ### References
 - [SCREEN SHAKE in Unity using Cinemachine, Sasquatch B Studios](https://www.youtube.com/watch?v=CgyLIWyDXqo&list=PLfmYNuLHEy-PQ6j6kki9kmM3Z5CayRSI0&index=4&ab_channel=SasquatchBStudios)
