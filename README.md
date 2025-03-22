@@ -24,6 +24,7 @@
 - Morton Code
 - Quadtree
 - Optimization Techniques (Profiler)
+- Debugging Techniques (Gizmo, Conditional Compilation)
 - Scene Transition
 - Save & Loading System
 - SQLite-net + SQLite
@@ -59,8 +60,8 @@
 
 ### References
 - [SCREEN SHAKE in Unity using Cinemachine, Sasquatch B Studios](https://www.youtube.com/watch?v=CgyLIWyDXqo&list=PLfmYNuLHEy-PQ6j6kki9kmM3Z5CayRSI0&index=4&ab_channel=SasquatchBStudios)
-- [Unity Manual](https://docs.unity3d.com/6000.0/Documentation/Manual/)
-- [Unity Universal RP Manual](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@7.1/manual/index.html)
+- [Unity Manual, Unity](https://docs.unity3d.com/6000.0/Documentation/Manual/)
+- [Unity Universal RP Manual, Unity](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@7.1/manual/index.html)
 - [OBJECT POOLING in Unity, Brackeys](https://www.youtube.com/watch?v=tdSmKaJvCoA&t=832s&ab_channel=Brackeys)
 - [Get started with UI Toolkit in Unity, Sasquatch B Studios](https://www.youtube.com/watch?v=_jtj73lu2Ko&t=317s&ab_channel=SasquatchBStudios)
 - [Boids, ECE 4760, Spring 2020, Adams/Land](https://people.ece.cornell.edu/land/courses/ece4760/labs/s2021/Boids/Boids.html)
