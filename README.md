@@ -21,15 +21,16 @@
 - Texture + Shader + Material
 - Boids
 - Job System
+- Burst Compiler
 - Morton Code
 - Quadtree
 - Optimization Techniques (Profiler)
-- Debugging Techniques (Gizmo, Conditional Compilation)
+- Debugging Techniques (Gizmo)
 - Scene Transition
 - Save & Loading System
 - SQLite-net + SQLite
 - Audio Mixer
-- Unity Ads + In-App purchase
+- Unity Ads + In-App purchase + Monetization
 - Push Notifications
 - Vibration
 - Localization
@@ -37,6 +38,17 @@
 ### Ongoing features
 - Raycast
 - Addressable
+
+### Metrics
+
+- Boids Algorithm with number of boids = 300
+
++ Without using any optimization techniques
+![Boids Without Any Optimizations](https://private-user-images.githubusercontent.com/58393822/425807100-45d0538c-756c-454e-ac85-093dc4bc326d.PNG?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDI3MTczMDMsIm5iZiI6MTc0MjcxNzAwMywicGF0aCI6Ii81ODM5MzgyMi80MjU4MDcxMDAtNDVkMDUzOGMtNzU2Yy00NTRlLWFjODUtMDkzZGM0YmMzMjZkLlBORz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMjMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzIzVDA4MDMyM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTZhMDA5Y2M2MDM0ZTkwNjU5YmYzNzZjMWNiYmEyYWIzY2FhODJhYjgyNWE0YmVkZTkyMjdhYjY5ZmZlYmQ0ZmImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.EUFsG0qQW9n87Tu-GwnkfiA5_gmpvJqbBBAi6JF0JxY)
+
++ When intergrating Job System + Burst Compiler in Unity
+
++ When intergrating
 
 ### Notes
 
@@ -57,6 +69,7 @@
     + When t = 0, Vector3.Lerp(a, b, t) returns a.
     + When t = 1, Vector3.Lerp(a, b, t) returns b.
     + When t = 0.5, Vector3.Lerp(a, b, t) returns the point midway between a and b.
+    + Returning value: a + (b-a)t
 
 ### References
 - [SCREEN SHAKE in Unity using Cinemachine, Sasquatch B Studios](https://www.youtube.com/watch?v=CgyLIWyDXqo&list=PLfmYNuLHEy-PQ6j6kki9kmM3Z5CayRSI0&index=4&ab_channel=SasquatchBStudios)
