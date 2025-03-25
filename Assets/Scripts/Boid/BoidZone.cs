@@ -22,6 +22,15 @@ public class BoidZone : MonoBehaviour
         public float3 velocity;
     };
 
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(new Vector3(boidZoneSO.minBounds.x, boidZoneSO.minBounds.y, 0), new Vector3(boidZoneSO.maxBounds.x, boidZoneSO.minBounds.y, 0));
+        Gizmos.DrawLine(new Vector3(boidZoneSO.maxBounds.x, boidZoneSO.minBounds.y, 0), new Vector3(boidZoneSO.maxBounds.x, boidZoneSO.maxBounds.y, 0));
+        Gizmos.DrawLine(new Vector3(boidZoneSO.maxBounds.x, boidZoneSO.maxBounds.y, 0), new Vector3(boidZoneSO.minBounds.x, boidZoneSO.maxBounds.y, 0));
+        Gizmos.DrawLine(new Vector3(boidZoneSO.minBounds.x, boidZoneSO.maxBounds.y, 0), new Vector3(boidZoneSO.minBounds.x, boidZoneSO.minBounds.y, 0));
+    }
+
     void Start()
     {
         boids = new List<Boid>(boidZoneSO.numOfBoids);

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f294da322cc6f9d49bfd2a9623d01117, type: 3}
   m_Name: BoidZone_0
   m_EditorClassIdentifier: 
-  minBounds: {x: 10, y: 0}
-  maxBounds: {x: 60, y: 50}
+  minBounds: {x: -5, y: 90}
+  maxBounds: {x: 5, y: 100}
   minSpeed: 5
   maxSpeed: 7
   turnFactor: 0.2
@@ -22,5 +22,5 @@ MonoBehaviour:
   centeringFactor: 0.0005
   visualRange: 20
   protectedRange: 2
-  numOfBoids: 300
+  numOfBoids: 20
   boidPrefab: {fileID: 219687644297702741, guid: da6f14abfeee74f4db5baf24de7e8112, type: 3}
