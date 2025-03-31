@@ -8,7 +8,6 @@ public class MainMenuEventHandler : MonoBehaviour
 {
     UIDocument uIDocument;
     Button startButton;
-
     Button settingsButton;
 
     private void Awake() {
@@ -25,10 +24,12 @@ public class MainMenuEventHandler : MonoBehaviour
     }
 
     void OnStartGameButtonClicked(ClickEvent click){
+        AudioManager.instance.PlaySound(AudioManager.instance.buttonClickedSound);
         SceneManager.LoadScene(GlobalConfig.LEVEL_SCENE_BUILD_INDEX);
     }
 
     void OnSettingsButtonClicked(ClickEvent click){
+        AudioManager.instance.PlaySound(AudioManager.instance.buttonClickedSound);
         Debug.Log("Settings button clicked");
     }
 }
