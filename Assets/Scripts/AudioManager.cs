@@ -2,10 +2,15 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    [Header("Sound Effects")]
     public AudioClip buttonClickedSound;
+    public AudioClip crashSound;
+    [Header("Music")]
+    public AudioClip mainMenuMusic;
+    [Header("Audio Sources")]
+    [SerializeField] AudioSource SFXsource;
+    [SerializeField] AudioSource musicSource;
     public static AudioManager instance;
-
-    AudioSource audioSource;
 
     private void Awake()
     {
@@ -18,12 +23,15 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject); // Persist across scenes
     }
 
-    private void Start() {
-        audioSource = GetComponent<AudioSource>();
-    }
-
     public void PlaySound(AudioClip sound)
     {
-        audioSource.PlayOneShot(sound);
+        SFXsource.PlayOneShot(sound);
+    }
+
+    public void PlayMusic(AudioClip music)
+    {
+        musicSource.clip = music;
+        musicSource.loop = true;
+        musicSource.Play();
     }
 }

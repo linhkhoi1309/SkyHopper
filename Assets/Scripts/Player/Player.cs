@@ -14,8 +14,6 @@ public class Player : MonoBehaviour
 
     [HideInInspector] public bool hasLost = false;
 
-    public AudioClip crashedSFX;
-
     public ParticleSystem explosionParticleSystem;
 
     public ParticleSystem shieldParticleSystem;

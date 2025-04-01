@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-public class MainMenuEventHandler : MonoBehaviour
+public class MainMenuUIEventHandler : MonoBehaviour
 {
     UIDocument uIDocument;
     Button startButton;
@@ -16,6 +16,10 @@ public class MainMenuEventHandler : MonoBehaviour
         settingsButton = uIDocument.rootVisualElement.Q<Button>(GlobalConfig.SETTINGS_BUTTON_NAME);
         startButton.RegisterCallback<ClickEvent>(OnStartGameButtonClicked);
         settingsButton.RegisterCallback<ClickEvent>(OnSettingsButtonClicked);
+    }
+
+    private void Start() {
+        AudioManager.instance.PlayMusic(AudioManager.instance.mainMenuMusic);
     }
 
     private void OnDisable() {

@@ -38,6 +38,8 @@
 ### Ongoing features
 - Raycast
 - Addressable
+- Daily Rewards
+- Inventory + Shop
 
 ### Metrics
 

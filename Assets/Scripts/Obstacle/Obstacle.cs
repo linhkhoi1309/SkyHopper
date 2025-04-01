@@ -20,7 +20,7 @@ public class Obstacle : MonoBehaviour
             player.explosionParticleSystem.Play();
             player.playerControl.DisableControl();
             player.hasLost = true;
-            AudioSource.PlayClipAtPoint(player.crashedSFX, Camera.main.transform.position, 1f);
+            AudioManager.instance.PlaySound(AudioManager.instance.crashSound);
         }
     }
 }

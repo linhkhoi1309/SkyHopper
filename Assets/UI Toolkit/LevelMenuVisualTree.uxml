@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="Container" style="flex-grow: 1;" />
+    <Style src="project://database/Assets/UI%20Toolkit/LevelMenuStyle.uss" />
+    <ui:VisualElement class="level_screen" >
+        <ui:ScrollView class="level_scroll_view">
+            
+        </ui:ScrollView>
+    </ui:VisualElement>
 </ui:UXML>
