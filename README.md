@@ -12,6 +12,8 @@
 - Rigidbody 2D
 - Collider (Edge + Circle + Box + Polygon + Capsule)
 - Particle Effect
+- Scriptable Object
+- Prefab + Prefab Variant
 - Post-processing (Bloom)
 - Joint (Hinge Joint 2D)
 - Effector (Area Effector 2D)
@@ -27,8 +29,7 @@
 - Optimization Techniques (Profiler)
 - Debugging Techniques (Gizmo)
 - Scene Transition (3 ways : Shader, USS, Animator)
-- Save & Loading System
-- SQLite-net + SQLite
+- Save & Loading System (SQLite-net + SQLite)
 - Audio Mixer
 - Unity Ads + In-App purchase + Monetization
 - Push Notifications
@@ -53,7 +54,10 @@
 + When intergrating
 
 ### Notes
-
+- URP Setup:
+    + Window -> Package Manager -> Unity Registry -> Universal RP
+    + Assets -> Create -> Rendering -> URP asset
+    + Edit -> Project Settings -> Graphics -> Assign URP asset
 - Making a chain effect:
     + Sprite Editor -> Skinning Editor -> Create Bones -> Auto Geometry -> Generate For Selected
     + Create Chain object -> Assign Sprite Skin component -> Create bones -> Assign Hinge Joint 2D component for each children bone object -> Assign its connected rigidbody (in Hinge Joint 2D component) for each bone consecutively -> Bone_0 assign with an Anchor object

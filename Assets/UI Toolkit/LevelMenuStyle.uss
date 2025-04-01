@@ -3,3 +3,18 @@
     height: 100%;
     background-color: black;
 }
+
+.level_scroll_view .unity-scroll-view__content-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.level_button {
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+}
