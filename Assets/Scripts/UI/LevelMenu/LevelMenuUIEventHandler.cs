@@ -11,24 +11,35 @@ public class LevelMenuUIEventHandler : MonoBehaviour
 
     List<Level> levels = new List<Level>();
 
-    private void Awake() {
+    private void Awake()
+    {
         uIDocument = GetComponent<UIDocument>();
         scrollView = uIDocument.rootVisualElement.Q<ScrollView>(className: "level_scroll_view");
     }
 
-    private void Start() {
+    private void Start()
+    {
         levels = DatabaseManager.Instance.GetLevels();
-        for(int i = 0; i < levels.Count; i++) {
+        for (int i = 0; i < levels.Count; i++)
+        {
             Button button = new Button();
             button.AddToClassList("level_button");
+            if (!levels[i].IsUnlocked)
+            {
+                button.AddToClassList("level_button_locked");
+            }
             button.text = levels[i].LevelName;
             scrollView.Add(button);
             button.RegisterCallback<ClickEvent, int>(OnLevelButtonClicked, levels[i].LevelSceneBuildIndex);
         }
     }
 
-    private void OnLevelButtonClicked(ClickEvent evt, int levelBuildIndex) {
-        AudioManager.instance.PlaySound(AudioManager.instance.buttonClickedSound);
-        SceneManager.LoadScene(levelBuildIndex);
+    private void OnLevelButtonClicked(ClickEvent evt, int levelBuildIndex)
+    {
+        if (levels[levelBuildIndex].IsUnlocked)
+        {
+            AudioManager.instance.PlaySound(AudioManager.instance.buttonClickedSound);
+            SceneManager.LoadScene(levelBuildIndex);
+        }
     }
 }

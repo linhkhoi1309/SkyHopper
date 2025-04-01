@@ -3,9 +3,9 @@
     <Style src="project://database/Assets/UI%20Toolkit/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=0b61105a9e80c214581a5ed68804c42f&amp;type=3#MainMenuStyle" />
     <ui:VisualElement class="menu_screen">
         <ui:VisualElement class="menu">
-            <ui:Label text="Sky Hopper" name="Header" class="header" style="-unity-font: url(&quot;project://database/Assets/TextMesh%20Pro/Fonts/Tektur-VariableFont_wdth,wght.ttf?fileID=12800000&amp;guid=2ffc9a74f137ccb4c98da6065140a16e&amp;type=3#Tektur-VariableFont_wdth,wght&quot;);" />
-            <ui:Button text="Start" name="StartButton" class="button" style="-unity-font: url(&quot;project://database/Assets/TextMesh%20Pro/Fonts/Tektur-VariableFont_wdth,wght.ttf?fileID=12800000&amp;guid=2ffc9a74f137ccb4c98da6065140a16e&amp;type=3#Tektur-VariableFont_wdth,wght&quot;);" />
-            <ui:Button text="Settings" name="SettingsButton" class="button" style="-unity-font: url(&quot;project://database/Assets/TextMesh%20Pro/Fonts/Tektur-VariableFont_wdth,wght.ttf?fileID=12800000&amp;guid=2ffc9a74f137ccb4c98da6065140a16e&amp;type=3#Tektur-VariableFont_wdth,wght&quot;);" />
+            <ui:Label text="Sky Hopper" name="Header" class="header" />
+            <ui:Button text="Start" name="StartButton" class="button" />
+            <ui:Button text="Settings" name="SettingsButton" class="button"  />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

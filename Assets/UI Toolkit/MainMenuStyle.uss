@@ -20,6 +20,7 @@
     color: white;
     margin: 10px 0px;
     -unity-font-definition: initial;
+    -unity-font: url("project://database/Assets/TextMesh%20Pro/Fonts/Tektur-VariableFont_wdth,wght.ttf");
     flex-grow: 5;
 }
 
@@ -32,6 +33,19 @@
     color: black;
     font-size: 23px;
     -unity-font-style: bold;
+    -unity-font: url("project://database/Assets/TextMesh%20Pro/Fonts/Tektur-VariableFont_wdth,wght.ttf");
     flex-grow: 1;
     -unity-font-definition: initial;
+    transition-property: opacity, scale;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.button:hover {
+    opacity: 0.5;
+}
+
+.button:active {
+    opacity: 0.5;
+    scale: 0.95;
 }

@@ -14,6 +14,7 @@
 - Particle Effect
 - Scriptable Object
 - Prefab + Prefab Variant
+- Coroutine
 - Post-processing (Bloom)
 - Joint (Hinge Joint 2D)
 - Effector (Area Effector 2D)
@@ -30,7 +31,6 @@
 - Debugging Techniques (Gizmo)
 - Scene Transition (3 ways : Shader, USS, Animator)
 - Save & Loading System (SQLite-net + SQLite)
-- Audio Mixer
 - Unity Ads + In-App purchase + Monetization
 - Push Notifications
 - Vibration
@@ -38,20 +38,10 @@
 
 ### Ongoing features
 - Raycast
+- Audio Mixer
 - Addressable
 - Daily Rewards
 - Inventory + Shop
-
-### Metrics
-
-- Boids Algorithm with number of boids = 300
-
-+ Without using any optimization techniques
-![Boids Without Any Optimizations](https://private-user-images.githubusercontent.com/58393822/425807100-45d0538c-756c-454e-ac85-093dc4bc326d.PNG?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDI3MTczMDMsIm5iZiI6MTc0MjcxNzAwMywicGF0aCI6Ii81ODM5MzgyMi80MjU4MDcxMDAtNDVkMDUzOGMtNzU2Yy00NTRlLWFjODUtMDkzZGM0YmMzMjZkLlBORz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMjMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzIzVDA4MDMyM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTZhMDA5Y2M2MDM0ZTkwNjU5YmYzNzZjMWNiYmEyYWIzY2FhODJhYjgyNWE0YmVkZTkyMjdhYjY5ZmZlYmQ0ZmImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.EUFsG0qQW9n87Tu-GwnkfiA5_gmpvJqbBBAi6JF0JxY)
-
-+ When intergrating Job System + Burst Compiler in Unity
-
-+ When intergrating
 
 ### Notes
 - URP Setup:
@@ -67,7 +57,7 @@
     + Lower value -> more prioritized
 - Shield Effect
     + Create Shield Shader (Create -> Shader Graph -> URP -> Unlit Shader Graph)
-    ![Shield Shader Graph](https://private-user-images.githubusercontent.com/58393822/423108471-63b15c32-47fe-4a7a-b7bb-bd93186f7c02.PNG?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDIwNDY5MDMsIm5iZiI6MTc0MjA0NjYwMywicGF0aCI6Ii81ODM5MzgyMi80MjMxMDg0NzEtNjNiMTVjMzItNDdmZS00YTdhLWI3YmItYmQ5MzE4NmY3YzAyLlBORz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMTUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzE1VDEzNTAwM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWRmY2QwYzVkNGFmMzQxZmM0NDJjNjc3MDk2MWEwNDc1NzMyYzA1OWFiZGY1ODg0MzFmMmQ2MzkzMWQ5YjAwNzYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.z9vPiD_mI6X9PGv2k8X3i6G09wpziUykmuzE51Q7goA)
+    ![Shield Shader Graph](https://private-user-images.githubusercontent.com/58393822/423108471-63b15c32-47fe-4a7a-b7bb-bd93186f7c02.PNG?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDM1MTk1MTIsIm5iZiI6MTc0MzUxOTIxMiwicGF0aCI6Ii81ODM5MzgyMi80MjMxMDg0NzEtNjNiMTVjMzItNDdmZS00YTdhLWI3YmItYmQ5MzE4NmY3YzAyLlBORz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA0MDElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNDAxVDE0NTMzMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTczMjdiMTVjNGJkN2EwMjRjMTcwNjAyYWVjODFlNDdhNWY3YzE3NzUxYzRlYzg5NjlmYWNmMzVlYmEwNzMxN2QmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.k7PDe48rxgAMqMqv1GEKFY46MiMEk-Ejc3Hc89iGd1c)
     + Create Shield Material
     + Create Shield Particle System (with only 1 particle generated and use Shield Material as material)
 - Integrating Unity UI Toolkit

@@ -2,19 +2,42 @@
     width: 100%;
     height: 100%;
     background-color: black;
+    padding-top: 100px;
 }
 
 .level_scroll_view .unity-scroll-view__content-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .level_button {
     margin: 10px;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     background-color: white;
     color: black;
     border-radius: 8px;
+    -unity-font: url("project://database/Assets/TextMesh%20Pro/Fonts/Tektur-VariableFont_wdth,wght.ttf");
+    font-size: 15px;
+    -unity-font-style: bold;
+    -unity-font-definition: initial;
+    transition-property: opacity, scale;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
 }
+
+.level_button:hover {
+    opacity: 0.5;
+}
+
+.level_button:active {
+    opacity: 0.5;
+    scale: 0.95;
+}
+
+.level_button_locked {
+    background-color: gray;
+}
+
