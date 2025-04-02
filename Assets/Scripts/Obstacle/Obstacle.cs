@@ -21,6 +21,7 @@ public class Obstacle : MonoBehaviour
             player.playerControl.DisableControl();
             player.hasLost = true;
             AudioManager.instance.PlaySound(AudioManager.instance.crashSound);
+            Handheld.Vibrate();
         }
     }
 }

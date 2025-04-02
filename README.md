@@ -23,17 +23,17 @@
 - UI (Unity UI tookit + Unity UI)
 - Texture + Shader + Material
 - Boids
-- Job System
+- Multithreaded Programming (Job System)
 - Burst Compiler
 - Morton Code
 - Quadtree
 - Optimization Techniques (Profiler)
 - Debugging Techniques (Gizmo)
-- Scene Transition (3 ways : Shader, USS, Animator)
 - Save & Loading System (SQLite-net + SQLite)
+- Vibration
+- Scene Transition (3 ways : Shader, USS, Animator)
 - Unity Ads + In-App purchase + Monetization
 - Push Notifications
-- Vibration
 - Localization
 
 ### Ongoing features

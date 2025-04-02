@@ -50,7 +50,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -10158,7 +10158,6 @@ MonoBehaviour:
   cinemachineImpulseSource: {fileID: 0}
   playerControl: {fileID: 0}
   hasLost: 0
-  crashedSFX: {fileID: 8300000, guid: 1e8c3076ff3d2604eaab7246a6b160f5, type: 3}
   explosionParticleSystem: {fileID: 7869672891932027821}
   shieldParticleSystem: {fileID: 8309604798944903418}
 --- !u!96 &2158457523659374581

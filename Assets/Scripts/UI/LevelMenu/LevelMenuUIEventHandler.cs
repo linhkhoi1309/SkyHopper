@@ -20,7 +20,7 @@ public class LevelMenuUIEventHandler : MonoBehaviour
     private void Start()
     {
         levels = DatabaseManager.Instance.GetLevels();
-        for (int i = 0; i < levels.Count; i++)
+        for (int i = 0; i < levels.Count ; i++)
         {
             Button button = new Button();
             button.AddToClassList("level_button");
@@ -28,7 +28,7 @@ public class LevelMenuUIEventHandler : MonoBehaviour
             {
                 button.AddToClassList("level_button_locked");
             }
-            button.text = levels[i].LevelName;
+            button.text = levels[i].LevelName; 
             scrollView.Add(button);
             button.RegisterCallback<ClickEvent, int>(OnLevelButtonClicked, levels[i].LevelSceneBuildIndex);
         }
@@ -36,10 +36,7 @@ public class LevelMenuUIEventHandler : MonoBehaviour
 
     private void OnLevelButtonClicked(ClickEvent evt, int levelBuildIndex)
     {
-        if (levels[levelBuildIndex].IsUnlocked)
-        {
-            AudioManager.instance.PlaySound(AudioManager.instance.buttonClickedSound);
-            SceneManager.LoadScene(levelBuildIndex);
-        }
+        AudioManager.instance.PlaySound(AudioManager.instance.buttonClickedSound);
+        SceneManager.LoadScene(levelBuildIndex);
     }
 }
