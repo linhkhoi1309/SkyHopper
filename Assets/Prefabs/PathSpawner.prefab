@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &70060108165241963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6744975156251643236}
+  - component: {fileID: 5202652942078011936}
+  m_Layer: 0
+  m_Name: PathSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6744975156251643236
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70060108165241963}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.1993525, y: 6.0824246, z: 0.3346971}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5202652942078011936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70060108165241963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c500c6659bceb43a742e9d9b8654c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathList:
+  - pathSO: {fileID: 11400000, guid: dab71c91a98f16943a2292c0770b49f8, type: 2}
+    waypointsTransforms:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - pathSO: {fileID: 11400000, guid: 88ad5e25813c1444dbb4d2539ef9848e, type: 2}
+    waypointsTransforms:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - pathSO: {fileID: 11400000, guid: 9cb31d5fdf555bc44926130eaf4edc72, type: 2}
+    waypointsTransforms:
+    - {fileID: 0}
+    - {fileID: 0}
+  - pathSO: {fileID: 11400000, guid: 501f39c3a3365a24fb61596497c8710c, type: 2}
+    waypointsTransforms:
+    - {fileID: 0}
+    - {fileID: 0}
+  - pathSO: {fileID: 11400000, guid: 8eabd3cef69831c40ba93a5d5bcd7f59, type: 2}
+    waypointsTransforms:
+    - {fileID: 0}
+    - {fileID: 0}
+  - pathSO: {fileID: 11400000, guid: fef398976cfeb8a41a7d4edea278f1d2, type: 2}
+    waypointsTransforms:
+    - {fileID: 0}
+    - {fileID: 0}
+  - pathSO: {fileID: 11400000, guid: f48bf540a56bcd941b24fde6bddb7ad0, type: 2}
+    waypointsTransforms:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}

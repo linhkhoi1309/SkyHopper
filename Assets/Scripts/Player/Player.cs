@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
 
     [HideInInspector] public bool hasLost = false;
 
+    [HideInInspector] public bool hasCompleted = false;
+
     public ParticleSystem explosionParticleSystem;
 
     public ParticleSystem shieldParticleSystem;

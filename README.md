@@ -31,7 +31,7 @@
 - Debugging Techniques (Gizmo)
 - Save & Loading System (SQLite-net + SQLite)
 - Vibration
-- Scene Transition (3 ways : Shader, USS, Animator)
+- Scene Transition
 - Unity Ads + In-App purchase + Monetization
 - Push Notifications
 - Localization

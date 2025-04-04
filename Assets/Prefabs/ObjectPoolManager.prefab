@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5860308327864270143
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1688440010339801900}
+  - component: {fileID: 3367559404576939138}
+  m_Layer: 0
+  m_Name: ObjectPoolManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1688440010339801900
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5860308327864270143}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3367559404576939138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5860308327864270143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3d4f096890f8034fb717be7cf3a9665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - prefab: {fileID: 6801923149617864279, guid: 05c3b27d37e7d4c4fa2a2f566dbf6902, type: 3}
+    size: 100
+    tag: Ammo
+  - prefab: {fileID: 7745825553858620592, guid: 12e9150a7cf46c245b94ee594f413328, type: 3}
+    size: 100
+    tag: PathObj_Triangle
+  - prefab: {fileID: 7745825553858620592, guid: fd4f0ca900b802641aca17ba838c0806, type: 3}
+    size: 10
+    tag: PathObj_HorizontalCapsule
+  - prefab: {fileID: 6913532253720247725, guid: b63353687e926384299f1e41d06aada8, type: 3}
+    size: 10
+    tag: PathObj_Wall
+  - prefab: {fileID: 2488426618401010775, guid: 6db531b757d171a41ab712ac470cb8f2, type: 3}
+    size: 100
+    tag: SpaceShip
