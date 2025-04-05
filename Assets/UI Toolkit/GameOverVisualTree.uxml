@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/GameOverStyle.uss" />
+    <ui:VisualElement class="game_over_screen">
+        <ui:Label class="game_over_label" text="Game Over!" />
+        <ui:Button class="retry_button" text="Retry" />
+        <ui:Button class="exit_button" text="Exit" />
+    </ui:VisualElement>
+    
+</ui:UXML>

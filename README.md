@@ -19,21 +19,22 @@
 - Joint (Hinge Joint 2D)
 - Effector (Area Effector 2D)
 - Skinning Editor
-- Design Pattern / Game Programming Pattern: Singleton, Object Pool
-- UI (Unity UI tookit + Unity UI)
+- Design Pattern / Game Programming Pattern: Singleton, Observer, Object Pool
+- UI (Unity UI tookit + uGUI)
 - Texture + Shader + Material
 - Boids
 - Multithreaded Programming (Job System)
 - Burst Compiler
 - Morton Code
 - Quadtree
+- A* pathfinding
+- DOTween
 - Optimization Techniques (Profiler)
 - Debugging Techniques (Gizmo)
-- Save & Loading System (SQLite-net + SQLite)
-- Vibration
-- Scene Transition
-- Unity Ads + In-App purchase + Monetization
-- Push Notifications
+- Save & Loading System (SQLite-net ORM + SQLite, PlayerPrefs)
+- Scene Transition (USS)
+- Unity Ads + In-App purchase + Monetization & Tracking tools
+- Mobile Native API (Push Notifications, Vibration, Accelerometer)
 - Localization
 
 ### Ongoing features
@@ -41,7 +42,9 @@
 - Audio Mixer
 - Addressable
 - Daily Rewards
+- Gacha
 - Inventory + Shop
+- Timeline
 
 ### Notes
 - URP Setup:
@@ -66,7 +69,6 @@
     + Drag newly created Visual Tree Asset to UI Document component
     + Tuning settings in Panel Settings
 
-
 ### References
 - [SCREEN SHAKE in Unity using Cinemachine, Sasquatch B Studios](https://www.youtube.com/watch?v=CgyLIWyDXqo&list=PLfmYNuLHEy-PQ6j6kki9kmM3Z5CayRSI0&index=4&ab_channel=SasquatchBStudios)
 - [Unity Manual, Unity](https://docs.unity3d.com/6000.0/Documentation/Manual/)
@@ -75,4 +77,7 @@
 - [Get started with UI Toolkit in Unity, Sasquatch B Studios](https://www.youtube.com/watch?v=_jtj73lu2Ko&t=317s&ab_channel=SasquatchBStudios)
 - [Boids, ECE 4760, Spring 2020, Adams/Land](https://people.ece.cornell.edu/land/courses/ece4760/labs/s2021/Boids/Boids.html)
 - [SQLite-net, Frank A. Krueger](https://github.com/praeclarum/sqlite-net)
-
+- [NativeQuadtree, Marijn Zwemmer](https://github.com/marijnz/NativeQuadtree)
+- [Audios](https://opengameart.org/)
+- [Fonts](https://fonts.google.com/)
+- [Sprites](https://www.kenney.nl/assets)
