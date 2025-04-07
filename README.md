@@ -32,7 +32,7 @@
 - Optimization Techniques (Profiler)
 - Debugging Techniques (Gizmo)
 - Save & Loading System (SQLite-net ORM + SQLite, PlayerPrefs)
-- Scene Transition (USS)
+- Scene Transition 
 - Unity Ads + In-App purchase + Monetization & Tracking tools
 - Mobile Native API (Push Notifications, Vibration, Accelerometer)
 - Localization
@@ -45,6 +45,7 @@
 - Gacha
 - Inventory + Shop
 - Timeline
+- Loading Screen
 
 ### Notes
 - URP Setup:
