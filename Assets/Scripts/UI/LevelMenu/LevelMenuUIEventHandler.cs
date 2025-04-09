@@ -24,7 +24,7 @@ public class LevelMenuUIEventHandler : MonoBehaviour
         {
             Button button = new Button();
             button.AddToClassList("level_button");
-            if (!levels[i].IsUnlocked)
+            if (!levels[i].IsCompleted)
             {
                 button.AddToClassList("level_button_locked");
             }

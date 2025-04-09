@@ -12,6 +12,6 @@ public class Level {
     [Column("levelSceneBuildIndex")]
     public int LevelSceneBuildIndex { get; set; }
 
-    [Column("isUnlocked")]
-    public bool IsUnlocked { get; set; }
+    [Column("isCompleted")]
+    public bool IsCompleted { get; set; }
 }

@@ -30,8 +30,23 @@ public class DatabaseManager : MonoBehaviour
 
     public SQLiteConnection InitialiseConnection()
     {
-        string dataSource = "skyhopper.sqlite3";
-        SQLiteConnectionString options = new SQLiteConnectionString(Path.Combine(Application.persistentDataPath, dataSource), false);
+        string dbName = "skyhopper.sqlite3";
+        string persistentPath = Path.Combine(Application.persistentDataPath, dbName);
+        string streamingPath = Path.Combine(Application.streamingAssetsPath, dbName);
+
+        if (!File.Exists(persistentPath))
+        {
+            #if UNITY_ANDROID
+            UnityWebRequest loadDb = UnityWebRequest.Get(streamingPath);
+            loadDb.SendWebRequest();
+            while (!loadDb.isDone) {}
+            File.WriteAllBytes(persistentPath, loadDb.downloadHandler.data);
+            #else
+            File.Copy(streamingPath, persistentPath);
+            #endif
+        }
+
+        SQLiteConnectionString options = new SQLiteConnectionString(persistentPath, false);
         _connection = new SQLiteConnection(options);
         return _connection;
     }
@@ -41,7 +56,8 @@ public class DatabaseManager : MonoBehaviour
         return _connection.Table<Level>().ToList();
     }
 
-    private void OnDestroy() {
+    private void OnDestroy()
+    {
         if (_connection != null)
         {
             _connection.Close();
