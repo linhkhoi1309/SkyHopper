@@ -24,13 +24,12 @@ public class DatabaseManager : MonoBehaviour
 
     void Start()
     {
-        _connection = InitialiseConnection();
-        _connection.CreateTable<Level>();
+        StartCoroutine(InitialiseConnectionRoutine());
     }
 
-    public SQLiteConnection InitialiseConnection()
+    public IEnumerator InitialiseConnectionRoutine()
     {
-        string dbName = "skyhopper.sqlite3";
+        string dbName = "skyhopper.db";
         string persistentPath = Path.Combine(Application.persistentDataPath, dbName);
         string streamingPath = Path.Combine(Application.streamingAssetsPath, dbName);
 
@@ -39,7 +38,9 @@ public class DatabaseManager : MonoBehaviour
             #if UNITY_ANDROID
             UnityWebRequest loadDb = UnityWebRequest.Get(streamingPath);
             loadDb.SendWebRequest();
-            while (!loadDb.isDone) {}
+            while (!loadDb.isDone) {
+                yield return new WaitForEndOfFrame();
+            }
             File.WriteAllBytes(persistentPath, loadDb.downloadHandler.data);
             #else
             File.Copy(streamingPath, persistentPath);
@@ -48,7 +49,7 @@ public class DatabaseManager : MonoBehaviour
 
         SQLiteConnectionString options = new SQLiteConnectionString(persistentPath, false);
         _connection = new SQLiteConnection(options);
-        return _connection;
+        yield return null;
     }
 
     public List<Level> GetLevels()

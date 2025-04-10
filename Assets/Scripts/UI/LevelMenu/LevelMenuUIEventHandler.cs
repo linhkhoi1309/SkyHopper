@@ -30,13 +30,14 @@ public class LevelMenuUIEventHandler : MonoBehaviour
             }
             button.text = levels[i].LevelName; 
             scrollView.Add(button);
-            button.RegisterCallback<ClickEvent, int>(OnLevelButtonClicked, levels[i].LevelSceneBuildIndex);
+            button.RegisterCallback<ClickEvent, Level>(OnLevelButtonClicked, levels[i]);
         }
     }
 
-    private void OnLevelButtonClicked(ClickEvent evt, int levelBuildIndex)
+    private void OnLevelButtonClicked(ClickEvent evt, Level level)
     {
+        if (!level.IsCompleted) return;
         AudioManager.instance.PlaySound(AudioManager.instance.buttonClickedSound);
-        SceneManager.LoadScene(levelBuildIndex);
+        SceneManager.LoadScene(level.LevelSceneBuildIndex);
     }
 }
