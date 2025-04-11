@@ -8,7 +8,6 @@ public class DatabaseManager : MonoBehaviour
 {
     SQLiteConnection _connection;
     public static DatabaseManager Instance { get; private set; }
-
     private void Awake()
     {
         if (Instance == null)
@@ -55,6 +54,11 @@ public class DatabaseManager : MonoBehaviour
     public List<Level> GetLevels()
     {
         return _connection.Table<Level>().ToList();
+    }
+
+    public void UpdateLevel(Level level)
+    {
+        _connection.Update(level);
     }
 
     private void OnDestroy()

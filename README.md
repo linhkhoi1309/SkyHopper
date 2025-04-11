@@ -15,13 +15,13 @@
 - Scriptable Object
 - Prefab + Prefab Variant
 - Coroutine
+- UI (Unity UI tookit + uGUI)
+- Texture + Shader + Material
 - Post-processing (Bloom)
 - Joint (Hinge Joint 2D)
 - Effector (Area Effector 2D)
 - Skinning Editor
 - Design Pattern / Game Programming Pattern: Singleton, Observer, Object Pool
-- UI (Unity UI tookit + uGUI)
-- Texture + Shader + Material
 - Boids
 - Multithreaded Programming (Job System)
 - Burst Compiler
@@ -31,8 +31,10 @@
 - DOTween
 - Optimization Techniques (Profiler)
 - Debugging Techniques (Gizmo)
-- Save & Loading System (SQLite-net ORM + SQLite, PlayerPrefs)
+- Save & Loading System (SQLite-net + StreammingAssets, PlayerPrefs)
+- Unity Web Request
 - Scene Transition 
+- Text Animation
 - Unity Ads + In-App purchase + Monetization & Tracking tools
 - Mobile Native API (Push Notifications, Vibration, Accelerometer)
 - Localization

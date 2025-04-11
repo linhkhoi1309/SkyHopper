@@ -16,12 +16,7 @@ public class Obstacle : MonoBehaviour
     {
         if (other.tag == "Player" && !player.hasLost)
         {
-            CameraShakeManager.instance.ShakeCamera(player.cinemachineImpulseSource);
-            player.explosionParticleSystem.Play();
-            player.playerControl.DisableControl();
-            player.hasLost = true;
-            AudioManager.instance.PlaySound(AudioManager.instance.crashSound);
-            Handheld.Vibrate();
+            player.Lost();
         }
     }
 }

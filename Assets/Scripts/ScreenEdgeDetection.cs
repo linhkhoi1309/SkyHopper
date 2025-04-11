@@ -25,12 +25,7 @@ public class ScreenEdgeDetection : MonoBehaviour
                 {
                     if (!player.hasLost)
                     {
-                        CameraShakeManager.instance.ShakeCamera(player.cinemachineImpulseSource);
-                        player.explosionParticleSystem.Play();
-                        player.playerControl.DisableControl();
-                        player.hasLost = true;
-                        AudioManager.instance.PlaySound(AudioManager.instance.crashSound);
-                        Handheld.Vibrate();
+                       player.Lost();
                     } else {
                         Destroy(target, 0.2f);
                     }

@@ -24,10 +24,7 @@ public class LevelMenuUIEventHandler : MonoBehaviour
         {
             Button button = new Button();
             button.AddToClassList("level_button");
-            if (!levels[i].IsCompleted)
-            {
-                button.AddToClassList("level_button_locked");
-            }
+            if (!levels[i].IsCompleted) button.AddToClassList("level_button_locked");
             button.text = levels[i].LevelName; 
             scrollView.Add(button);
             button.RegisterCallback<ClickEvent, Level>(OnLevelButtonClicked, levels[i]);
@@ -39,5 +36,7 @@ public class LevelMenuUIEventHandler : MonoBehaviour
         if (!level.IsCompleted) return;
         AudioManager.instance.PlaySound(AudioManager.instance.buttonClickedSound);
         SceneManager.LoadScene(level.LevelSceneBuildIndex);
+        GameManager.instance.ResetGame();
+        GameManager.instance.SetCurrentLevel(level);
     }
 }

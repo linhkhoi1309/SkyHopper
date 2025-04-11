@@ -24,4 +24,13 @@ public class Player : MonoBehaviour
         cinemachineImpulseSource = GetComponent<CinemachineImpulseSource>();
         playerControl = GetComponent<PlayerControl>();
     }
+
+    public void Lost(){
+        CameraShakeManager.instance.ShakeCamera(cinemachineImpulseSource);
+        hasLost = true;
+        explosionParticleSystem.Play();
+        playerControl.DisableControl();
+        AudioManager.instance.PlaySound(AudioManager.instance.crashSound);
+        Handheld.Vibrate();
+    }
 }
