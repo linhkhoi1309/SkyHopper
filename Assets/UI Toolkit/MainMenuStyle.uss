@@ -49,3 +49,50 @@
     opacity: 0.5;
     scale: 0.95;
 }
+
+.popup {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background-color: #222;
+    border-radius: 10px;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.popup-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.popup-header {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.popup-label {
+    color: white;
+    width: 100px;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.popup-slider {
+    flex-grow: 1;
+    max-width: 170px;
+    min-width: 100px;
+}
+
+.popup-close-button {
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}

@@ -10,8 +10,8 @@ public class AudioManager : MonoBehaviour
     [Header("Music")]
     public AudioClip mainMenuMusic;
     [Header("Audio Sources")]
-    [SerializeField] AudioSource SFXsource;
-    [SerializeField] AudioSource musicSource;
+    public AudioSource SFXsource;
+    public AudioSource musicSource;
     public static AudioManager instance;
 
     private void Awake()
@@ -35,5 +35,14 @@ public class AudioManager : MonoBehaviour
         musicSource.clip = music;
         musicSource.loop = true;
         musicSource.Play();
+    }
+
+    public void SetSfxVolume(float volume)
+    {
+        SFXsource.volume = volume;
+    }
+    public void SetMusicVolume(float volume)
+    {
+        musicSource.volume = volume;
     }
 }

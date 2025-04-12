@@ -1,11 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?> 
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI%20Toolkit/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=0b61105a9e80c214581a5ed68804c42f&amp;type=3#MainMenuStyle" />
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements"
+    xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements"
+    editor="UnityEditor.UIElements"
+    noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style
+        src="project://database/Assets/UI%20Toolkit/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=0b61105a9e80c214581a5ed68804c42f&amp;type=3#MainMenuStyle" />
     <ui:VisualElement class="menu_screen">
         <ui:VisualElement class="menu">
             <ui:Label text="Sky Hopper" name="Header" class="header" />
             <ui:Button text="Start" name="StartButton" class="button" />
-            <ui:Button text="Settings" name="SettingsButton" class="button"  />
+            <ui:Button text="Settings" name="SettingsButton" class="button" />
+            <ui:VisualElement name="SettingsPopup" class="popup hidden">
+                <ui:Label text="Settings" class="popup-header" />
+                <ui:VisualElement class="popup-row">
+                    <ui:Label text="Music Volume" class="popup-label" />
+                    <ui:Slider name="MusicSlider" low-value="0" high-value="1" value="0.5"
+                        class="popup-slider" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="popup-row">
+                    <ui:Label text="SFX Volume" class="popup-label" />
+                    <ui:Slider name="SfxSlider" low-value="0" high-value="1" value="0.5"
+                        class="popup-slider" />
+                </ui:VisualElement>
+
+                <ui:Button text="Close" name="CloseSettingsButton" class="popup-close-button" />
+            </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
