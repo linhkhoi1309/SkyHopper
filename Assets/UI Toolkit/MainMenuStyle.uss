@@ -57,12 +57,20 @@
     background-color: #222;
     border-radius: 10px;
     padding: 15px;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    transition-property: opacity, scale, translate;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    opacity: 1;
+    scale: 1;
+    translate: 0 0;
 }
 
 .popup-row {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -73,7 +81,9 @@
 .popup-header {
     color: white;
     font-size: 20px;
-    margin-bottom: 10px;
+    margin: 10px 0px;
+    -unity-font-definition: initial;
+    -unity-font: url("project://database/Assets/TextMesh%20Pro/Fonts/Tektur-VariableFont_wdth,wght.ttf");
 }
 
 .popup-label {
@@ -81,18 +91,38 @@
     width: 100px;
     flex-shrink: 0;
     margin-right: 10px;
+    -unity-font-definition: initial;
+    -unity-font: url("project://database/Assets/TextMesh%20Pro/Fonts/Tektur-VariableFont_wdth,wght.ttf");
 }
 
 .popup-slider {
     flex-grow: 1;
-    max-width: 170px;
-    min-width: 100px;
+    max-width: 60%;
 }
 
 .popup-close-button {
     margin-top: 10px;
+    width: 100px;
+    background-color: white;
+    color: black;
+    -unity-font-definition: initial;
+    -unity-font: url("project://database/Assets/TextMesh%20Pro/Fonts/Tektur-VariableFont_wdth,wght.ttf");
+    border-radius: 10px;
+    transition-property: opacity, scale;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    -unity-font-style: bold;
+}
+
+.popup-close-button:hover {
+    opacity: 0.5;
+    scale: 1.05;
 }
 
 .hidden {
-    display: none;
+    opacity: 0;
+    scale: 0.9;
+    translate: 0 20px; /* Moves it down for animation */
+    visibility: hidden; /* Hides it from interaction but keeps it for animation */
+    transition-timing-function: ease-in;
 }

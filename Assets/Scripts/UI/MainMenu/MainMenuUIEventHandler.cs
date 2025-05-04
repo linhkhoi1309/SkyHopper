@@ -10,15 +10,13 @@ public class MainMenuUIEventHandler : MonoBehaviour
     UIDocument uIDocument;
     Button startButton;
     Button settingsButton;
-
     Button closePopupButton;
-
     VisualElement popupSettings;
-
     Slider musicVolumeSlider;
     Slider soundVolumeSlider;
 
-    private void Awake() {
+    private void Awake()
+    {
         uIDocument = GetComponent<UIDocument>();
         startButton = uIDocument.rootVisualElement.Q<Button>(GlobalConfig.START_BUTTON_NAME);
         settingsButton = uIDocument.rootVisualElement.Q<Button>(GlobalConfig.SETTINGS_BUTTON_NAME);
@@ -47,25 +45,49 @@ public class MainMenuUIEventHandler : MonoBehaviour
     {
         AudioManager.instance.PlaySound(AudioManager.instance.buttonClickedSound);
         popupSettings.AddToClassList("hidden");
+        PlayerPrefs.SetFloat(GlobalConfig.MUSIC_VOLUME_PREFS_KEY, musicVolumeSlider.value);
+        PlayerPrefs.SetFloat(GlobalConfig.SOUND_VOLUME_PREFS_KEY, soundVolumeSlider.value);
+        PlayerPrefs.Save();
     }
 
-    private void Start() {
+    private void Start()
+    {
         AudioManager.instance.PlayMusic(AudioManager.instance.mainMenuMusic);
-        musicVolumeSlider.value = AudioManager.instance.musicSource.volume;
-        soundVolumeSlider.value = AudioManager.instance.SFXsource.volume;
+        if (PlayerPrefs.HasKey(GlobalConfig.MUSIC_VOLUME_PREFS_KEY))
+        {
+            musicVolumeSlider.value = PlayerPrefs.GetFloat(GlobalConfig.MUSIC_VOLUME_PREFS_KEY);
+        }
+        else
+        {
+            musicVolumeSlider.value = AudioManager.instance.musicSource.volume;
+        }
+        if (PlayerPrefs.HasKey(GlobalConfig.SOUND_VOLUME_PREFS_KEY))
+        {
+            soundVolumeSlider.value = PlayerPrefs.GetFloat(GlobalConfig.SOUND_VOLUME_PREFS_KEY);
+        }
+        else
+        {
+            soundVolumeSlider.value = AudioManager.instance.SFXsource.volume;
+        }
     }
 
-    private void OnDisable() {
+    private void OnDisable()
+    {
         startButton.UnregisterCallback<ClickEvent>(OnStartGameButtonClicked);
         settingsButton.UnregisterCallback<ClickEvent>(OnSettingsButtonClicked);
+        closePopupButton.UnregisterCallback<ClickEvent>(OnClosePopupButtonClicked);
+        musicVolumeSlider.UnregisterValueChangedCallback(OnMusicVolumeSliderValueChanged);
+        soundVolumeSlider.UnregisterValueChangedCallback(OnSoundVolumeSliderValueChanged);
     }
 
-    void OnStartGameButtonClicked(ClickEvent click){
+    void OnStartGameButtonClicked(ClickEvent click)
+    {
         AudioManager.instance.PlaySound(AudioManager.instance.buttonClickedSound);
         SceneManager.LoadScene(GlobalConfig.LEVEL_SCENE_BUILD_INDEX);
     }
 
-    void OnSettingsButtonClicked(ClickEvent click){
+    void OnSettingsButtonClicked(ClickEvent click)
+    {
         AudioManager.instance.PlaySound(AudioManager.instance.buttonClickedSound);
         popupSettings.RemoveFromClassList("hidden");
     }

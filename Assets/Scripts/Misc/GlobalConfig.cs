@@ -9,5 +9,8 @@ public static class GlobalConfig {
     public const string POPUP_SETTINGS_CLOSE_BUTTON_NAME = "CloseSettingsButton";
     public const string MUSIC_VOLUME_SLIDER_NAME = "MusicSlider";
     public const string SOUND_VOLUME_SLIDER_NAME = "SfxSlider";
+    
+    public const string MUSIC_VOLUME_PREFS_KEY = "MusicVolume";
+    public const string SOUND_VOLUME_PREFS_KEY = "SfxVolume";
     public const int LEVEL_SCENE_BUILD_INDEX = 1;
 }

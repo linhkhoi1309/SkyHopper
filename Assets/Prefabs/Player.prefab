@@ -9930,7 +9930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a6c5673a98c8434aaf850c8aadd6bbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: {x: 0, y: 6}
+  jumpSpeed: {x: 0, y: 5}
   isControlAllowed: 1
 --- !u!50 &5735973035100353829
 Rigidbody2D:
@@ -10158,6 +10158,7 @@ MonoBehaviour:
   cinemachineImpulseSource: {fileID: 0}
   playerControl: {fileID: 0}
   hasLost: 0
+  hasCompleted: 0
   explosionParticleSystem: {fileID: 7869672891932027821}
   shieldParticleSystem: {fileID: 8309604798944903418}
 --- !u!96 &2158457523659374581

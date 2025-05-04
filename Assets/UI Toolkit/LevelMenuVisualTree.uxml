@@ -2,6 +2,8 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/LevelMenuStyle.uss" />
     <ui:VisualElement class="level_screen" >
+        <ui:Button class="level_back_button"/>
+        <ui:Label class="level_title" text="Levels" />
         <ui:ScrollView class="level_scroll_view" />
     </ui:VisualElement>
 </ui:UXML>

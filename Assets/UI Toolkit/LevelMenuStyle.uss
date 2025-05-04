@@ -3,6 +3,9 @@
     height: 100%;
     background-color: black;
     padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .level_scroll_view .unity-scroll-view__content-container{
@@ -28,8 +31,37 @@
     transition-timing-function: ease-in-out;
 }
 
+.level_back_button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin: 5px;
+    width: 60px;
+    height: 60px;
+    transition-property: opacity, scale;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    background-color: black;
+    scale: -1 1;
+    border-width: 0;
+}
+
+.level_back_button:hover {
+    opacity: 0.5;
+    scale: -1.05 1.05;
+}
+
+.level_title {
+    margin: 5px;
+    color: white;
+    -unity-font: url("project://database/Assets/TextMesh%20Pro/Fonts/Tektur-VariableFont_wdth,wght.ttf");
+    font-size: 40px;
+    -unity-font-definition: initial;
+}
+
 .level_button:hover {
     opacity: 0.5;
+    scale: 1.05;
 }
 
 .level_button:active {
