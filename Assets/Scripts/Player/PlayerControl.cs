@@ -15,12 +15,6 @@ public class PlayerControl : MonoBehaviour
         rgbd2d = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void OnJump()
     {
         if (isControlAllowed)
@@ -32,5 +26,8 @@ public class PlayerControl : MonoBehaviour
 
     public void DisableControl(){
         isControlAllowed = false;
+    }
+    public void EnableControl(){
+        isControlAllowed = true;
     }
 }

@@ -13,4 +13,7 @@ public class Coin : MonoBehaviour
             AudioSource.PlayClipAtPoint(coinSFX, Camera.main.transform.position, 1f);
         }
     }
+
+    private void Start() {
+    }
 }

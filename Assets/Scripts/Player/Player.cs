@@ -33,4 +33,12 @@ public class Player : MonoBehaviour
         AudioManager.instance.PlaySound(AudioManager.instance.crashSound);
         Handheld.Vibrate();
     }
+
+    public void Pause(){
+        playerControl.DisableControl();
+    }
+
+    public void Continue(){
+        playerControl.EnableControl();
+    }
 }
