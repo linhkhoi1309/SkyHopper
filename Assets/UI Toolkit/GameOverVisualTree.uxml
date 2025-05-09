@@ -6,10 +6,10 @@
     <Style src="project://database/Assets/UI%20Toolkit/GameOverStyle.uss" />
     <ui:VisualElement class="game_over_screen">
         <ui:VisualElement class="menu">
-            <ui:Label class="header" text="Level 001" />
-            <ui:Label class="header" text="FAILED" />
-            <ui:Button class="button" text="Continue" />
-            <ui:Button class="button" text="Retry" />
+            <ui:Label class="header" name="game_over_level_name" text="Level 000" />
+            <ui:Label class="header" name="game_over_level_state" text="FAILED" />
+            <ui:Button class="button" name="game_over_primary_button" text="Skip" />
+            <ui:Button class="button" name="game_over_secondary_button" text="Retry" />
         </ui:VisualElement>
     </ui:VisualElement>
 

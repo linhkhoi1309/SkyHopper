@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [DisallowMultipleComponent]
 [RequireComponent(typeof(PlayerControl))]
@@ -32,6 +33,7 @@ public class Player : MonoBehaviour
         playerControl.DisableControl();
         AudioManager.instance.PlaySound(AudioManager.instance.crashSound);
         Handheld.Vibrate();
+        GameManager.instance.GameOver();
     }
 
     public void Pause(){

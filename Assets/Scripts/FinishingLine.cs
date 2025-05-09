@@ -53,6 +53,7 @@ public class FinishingLine : MonoBehaviour
         {
             AudioManager.instance.PlaySound(AudioManager.instance.completeSound);
             player.hasCompleted = true;
+            DatabaseManager.Instance.UpdateLevelCompletion(GameManager.instance.currentLevelId, true);
         }
     }
 }

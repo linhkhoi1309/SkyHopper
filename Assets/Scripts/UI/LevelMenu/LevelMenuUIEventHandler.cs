@@ -49,6 +49,7 @@ public class LevelMenuUIEventHandler : MonoBehaviour
     private void OnLevelButtonClicked(ClickEvent evt, Level level)
     {
         if (!level.IsCompleted) return;
+        GameManager.instance.SetCurrentLevelId(level.Id);
         AudioManager.instance.PlaySound(AudioManager.instance.buttonClickedSound);
         SceneManager.LoadScene(level.LevelSceneBuildIndex);
     }

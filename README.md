@@ -81,6 +81,7 @@
 - [Boids, ECE 4760, Spring 2020, Adams/Land](https://people.ece.cornell.edu/land/courses/ece4760/labs/s2021/Boids/Boids.html)
 - [SQLite-net, Frank A. Krueger](https://github.com/praeclarum/sqlite-net)
 - [NativeQuadtree, Marijn Zwemmer](https://github.com/marijnz/NativeQuadtree)
+- [DOTween, Documentation](https://dotween.demigiant.com/documentation.php)
 - [Audios](https://opengameart.org/)
 - [Fonts](https://fonts.google.com/)
 - [Sprites](https://www.kenney.nl/assets)

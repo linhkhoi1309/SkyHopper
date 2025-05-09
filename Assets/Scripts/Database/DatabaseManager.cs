@@ -56,9 +56,19 @@ public class DatabaseManager : MonoBehaviour
         return _connection.Table<Level>().ToList();
     }
 
-    public void UpdateLevel(Level level)
+    public Level GetLevelById(int id)
     {
-        _connection.Update(level);
+        return _connection.Find<Level>(id);
+    }
+
+    public void UpdateLevelCompletion(int id, bool isCompleted)
+    {
+        var level = _connection.Find<Level>(id);
+        if (level != null)
+        {
+            level.IsCompleted = isCompleted;
+            _connection.Update(level);
+        }
     }
 
     private void OnDestroy()
