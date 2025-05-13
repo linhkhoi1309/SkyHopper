@@ -177,6 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonClickedSound: {fileID: 8300000, guid: e65f5e785d81b74439ed18331703c089, type: 3}
   crashSound: {fileID: 8300000, guid: 1e8c3076ff3d2604eaab7246a6b160f5, type: 3}
+  completeSound: {fileID: 8300000, guid: db0e97d202223a24db9c836a11d52d30, type: 3}
   mainMenuMusic: {fileID: 8300000, guid: b75e6621d7d75b14facf871ded07260c, type: 3}
   SFXsource: {fileID: 4276185519042914725}
   musicSource: {fileID: 6608218022670298068}

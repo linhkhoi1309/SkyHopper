@@ -71,6 +71,16 @@ public class DatabaseManager : MonoBehaviour
         }
     }
 
+    public void UpdateLevelUnlockStatus(int id, bool isUnlocked)
+    {
+        var level = _connection.Find<Level>(id);
+        if (level != null)
+        {
+            level.IsUnlocked = isUnlocked;
+            _connection.Update(level);
+        }
+    }
+
     private void OnDestroy()
     {
         if (_connection != null)

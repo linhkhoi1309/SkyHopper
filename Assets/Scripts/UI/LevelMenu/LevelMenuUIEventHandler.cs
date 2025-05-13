@@ -26,14 +26,14 @@ public class LevelMenuUIEventHandler : MonoBehaviour
 
     private void Start()
     {
-        backButton.style.backgroundImage = new StyleBackground(backSprite);
-        
         levels = DatabaseManager.Instance.GetLevels();
+        backButton.style.backgroundImage = new StyleBackground(backSprite);
+        if(GameManager.instance.levels.Count == 0) GameManager.instance.levels = levels;
         for (int i = 0; i < levels.Count ; i++)
         {
             Button button = new Button();
             button.AddToClassList("level_button");
-            if (!levels[i].IsCompleted) button.AddToClassList("level_button_locked");
+            if (!levels[i].IsUnlocked) button.AddToClassList("level_button_locked");
             button.text = levels[i].LevelName; 
             scrollView.Add(button);
             button.RegisterCallback<ClickEvent, Level>(OnLevelButtonClicked, levels[i]);
@@ -48,7 +48,7 @@ public class LevelMenuUIEventHandler : MonoBehaviour
 
     private void OnLevelButtonClicked(ClickEvent evt, Level level)
     {
-        if (!level.IsCompleted) return;
+        if (!level.IsUnlocked) return;
         GameManager.instance.SetCurrentLevelId(level.Id);
         AudioManager.instance.PlaySound(AudioManager.instance.buttonClickedSound);
         SceneManager.LoadScene(level.LevelSceneBuildIndex);

@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public int currentLevelId{ get; private set; } = -1;
     public int currentCoinCount{ get; private set; } = 0;
-
+    public List<Level> levels = new List<Level>();
     void Start()
     {
         if (instance == null)

@@ -7,7 +7,6 @@ public class FinishingLine : MonoBehaviour
     SpriteRenderer spriteRenderer;
     public float blinkDuration = 0.5f; 
     public bool isBlinking = true; 
-
     Player player;
 
     private void Awake()
@@ -54,6 +53,9 @@ public class FinishingLine : MonoBehaviour
             AudioManager.instance.PlaySound(AudioManager.instance.completeSound);
             player.hasCompleted = true;
             DatabaseManager.Instance.UpdateLevelCompletion(GameManager.instance.currentLevelId, true);
+            if(GameManager.instance.currentLevelId + 1 <= GameManager.instance.levels.Count) 
+            DatabaseManager.Instance.UpdateLevelUnlockStatus(GameManager.instance.currentLevelId + 1, true);
+            GameManager.instance.GameOver();
         }
     }
 }

@@ -37,7 +37,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50%;
+    height: 55%;
 }
 
 .header {
@@ -47,4 +47,30 @@
     -unity-font-definition: initial;
     -unity-font: url("project://database/Assets/TextMesh%20Pro/Fonts/Tektur-VariableFont_wdth,wght.ttf");
     flex-grow: 5;
+}
+
+#game_over_secondary_button{
+    width: 100px;
+    height: 100px;
+    background-image: url("project://database/Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/Circle.png?fileID=-2413806693520163455&amp;guid=ebe73ca9363db456bacf42c025bb4847&amp;type=3#Circle");
+    -unity-background-image-tint-color: rgba(145, 145, 145, 0.93);
+    max-width: 100px;
+    max-height: 100px;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game_over_secondary_button_icon{
+    width: 100px;
+    height: 100px;
+    background-image: url("project://database/Assets/Sprites/Icons/sheet_white1x.png?fileID=-1017601493&amp;guid=ff0c2463219e89c4a8b12987893a7c8a&amp;type=3#sheet_white1x_15");
+    scale: -1 1;
+}
+
+#game_over_secondary_button:focus, #game_over_secondary_button:hover{
+    opacity: 0.5;
 }

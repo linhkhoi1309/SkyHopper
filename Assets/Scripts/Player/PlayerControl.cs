@@ -23,11 +23,7 @@ public class PlayerControl : MonoBehaviour
             rgbd2d.velocity = jumpSpeed;
         }
     }
-
-    public void DisableControl(){
-        isControlAllowed = false;
-    }
-    public void EnableControl(){
-        isControlAllowed = true;
+    public void EnableControl(bool controlAllow){
+        isControlAllowed = controlAllow;
     }
 }

@@ -9,7 +9,6 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     [HideInInspector] public CinemachineImpulseSource cinemachineImpulseSource;
-    
 
     [HideInInspector] public PlayerControl playerControl;
 
@@ -30,17 +29,18 @@ public class Player : MonoBehaviour
         CameraShakeManager.instance.ShakeCamera(cinemachineImpulseSource);
         hasLost = true;
         explosionParticleSystem.Play();
-        playerControl.DisableControl();
+        playerControl.EnableControl(false);
         AudioManager.instance.PlaySound(AudioManager.instance.crashSound);
         Handheld.Vibrate();
+        DatabaseManager.Instance.UpdateLevelCompletion(GameManager.instance.currentLevelId, false);
         GameManager.instance.GameOver();
     }
 
     public void Pause(){
-        playerControl.DisableControl();
+        playerControl.EnableControl(false);
     }
 
     public void Continue(){
-        playerControl.EnableControl();
+        playerControl.EnableControl(true);
     }
 }

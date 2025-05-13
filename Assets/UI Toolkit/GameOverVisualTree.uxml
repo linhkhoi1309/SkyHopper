@@ -1,16 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements"
-    xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements"
-    editor="UnityEditor.UIElements"
-    noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI%20Toolkit/GameOverStyle.uss" />
-    <ui:VisualElement class="game_over_screen">
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/GameOverStyle.uss?fileID=7433441132597879392&amp;guid=3fcca9ede9846064fb641458e04f3fd6&amp;type=3#GameOverStyle" />
+    <ui:VisualElement name="VisualElement" class="game_over_screen">
         <ui:VisualElement class="menu">
-            <ui:Label class="header" name="game_over_level_name" text="Level 000" />
-            <ui:Label class="header" name="game_over_level_state" text="FAILED" />
-            <ui:Button class="button" name="game_over_primary_button" text="Skip" />
-            <ui:Button class="button" name="game_over_secondary_button" text="Retry" />
+            <ui:Label name="game_over_level_name" text="Level 000" class="header" />
+            <ui:Label name="game_over_level_state" text="FAILED" class="header" />
+            <ui:Button name="game_over_primary_button" text="Skip" class="button" />
+            <ui:VisualElement name="game_over_secondary_button">
+                <ui:VisualElement name="game_over_secondary_button_icon" />
+            </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
-
 </ui:UXML>

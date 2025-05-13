@@ -14,4 +14,7 @@ public class Level {
 
     [Column("isCompleted")]
     public bool IsCompleted { get; set; }
+
+    [Column("isUnlocked")]
+    public bool IsUnlocked { get; set; }
 }
