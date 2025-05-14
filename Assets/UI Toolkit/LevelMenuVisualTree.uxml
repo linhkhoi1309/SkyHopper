@@ -1,9 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?> 
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI%20Toolkit/LevelMenuStyle.uss" />
-    <ui:VisualElement class="level_screen" >
-        <ui:Button class="level_back_button"/>
-        <ui:Label class="level_title" text="Levels" />
+    <Style src="project://database/Assets/UI%20Toolkit/LevelMenuStyle.uss?fileID=7433441132597879392&amp;guid=e1aa87f2643688f4786668c60a67d11c&amp;type=3#LevelMenuStyle" />
+    <ui:VisualElement class="level_screen">
+        <ui:Button class="level_back_button" />
+        <ui:Label text="Levels" class="level_title">
+            <Bindings>
+                <UnityEngine.Localization.LocalizedString property="text" table="GUID:83c560564cbdcfb419f2ae3c0b4c4b3b" entry="Id(2788254523392)" />
+            </Bindings>
+        </ui:Label>
         <ui:ScrollView class="level_scroll_view" />
     </ui:VisualElement>
 </ui:UXML>

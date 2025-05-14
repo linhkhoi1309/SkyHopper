@@ -9,11 +9,13 @@ public class GameOverMenuUIEventHandler : MonoBehaviour
 {
     UIDocument uIDocument;
     Button primaryButton;
+    VisualElement secondaryButtonIcon;
     VisualElement secondaryButton;
     VisualElement quitButton;
     Level currentLevel;
     Label levelNameLabel;
-    Label levelStateLabel;
+    Label levelFailedLabel;
+    Label levelCompletedLabel;
 
     [SerializeField] Sprite nextLevelIcon;
 
@@ -26,8 +28,10 @@ public class GameOverMenuUIEventHandler : MonoBehaviour
         currentLevel = DatabaseManager.Instance.GetLevelById(GameManager.instance.currentLevelId);
 
         levelNameLabel = uIDocument.rootVisualElement.Q<Label>(name: "game_over_level_name");
-        levelStateLabel = uIDocument.rootVisualElement.Q<Label>(name: "game_over_level_state");
+        levelFailedLabel = uIDocument.rootVisualElement.Q<Label>(name: "game_over_level_failed");
+        levelCompletedLabel = uIDocument.rootVisualElement.Q<Label>(name: "game_over_level_completed");
         primaryButton = uIDocument.rootVisualElement.Q<Button>(name: "game_over_primary_button");
+        secondaryButtonIcon = uIDocument.rootVisualElement.Q<VisualElement>(name: "game_over_secondary_button_icon");
         secondaryButton = uIDocument.rootVisualElement.Q<VisualElement>(name: "game_over_secondary_button");
         quitButton = uIDocument.rootVisualElement.Q<VisualElement>(name: "game_over_quit_button");
 
@@ -38,17 +42,16 @@ public class GameOverMenuUIEventHandler : MonoBehaviour
         if (currentLevel != null) levelNameLabel.text = "Level " + int.Parse(currentLevel.LevelName).ToString("D3");
         if (currentLevel.IsCompleted)
         {
-            levelStateLabel.text = "COMPLETED";
             primaryButton.style.display = DisplayStyle.None;
-            secondaryButton.style.backgroundImage = new StyleBackground(nextLevelIcon);
-            secondaryButton.style.scale = new Scale(new Vector2(1f, 1f));
-            secondaryButton.style.width = new StyleLength(new Length(80, LengthUnit.Pixel));
-            secondaryButton.style.height = new StyleLength(new Length(80, LengthUnit.Pixel));
+            levelFailedLabel.style.display = DisplayStyle.None;
+            secondaryButtonIcon.style.backgroundImage = new StyleBackground(nextLevelIcon);
+            secondaryButtonIcon.style.scale = new Scale(new Vector2(1f, 1f));
+            secondaryButtonIcon.style.width = new StyleLength(new Length(80, LengthUnit.Pixel));
+            secondaryButtonIcon.style.height = new StyleLength(new Length(80, LengthUnit.Pixel));
         }
         else
         {
-            levelStateLabel.text = "FAILED";
-            primaryButton.text = "Skip";
+            levelCompletedLabel.style.display = DisplayStyle.None;
         }
     }
 

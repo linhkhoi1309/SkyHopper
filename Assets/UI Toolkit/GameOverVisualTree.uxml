@@ -1,17 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?> 
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/GameOverStyle.uss?fileID=7433441132597879392&amp;guid=3fcca9ede9846064fb641458e04f3fd6&amp;type=3#GameOverStyle" />
     <ui:VisualElement name="VisualElement" class="game_over_screen">
         <ui:VisualElement class="menu">
             <ui:Label name="game_over_level_name" text="Level 000" class="header" />
-            <ui:Label name="game_over_level_state" text="FAILED" class="header" />
-            <ui:Button name="game_over_primary_button" text="Skip" class="button" />
+            <ui:Label name="game_over_level_failed" text="FAILED" class="header">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:83c560564cbdcfb419f2ae3c0b4c4b3b" entry="Id(2968408268800)" />
+                </Bindings>
+            </ui:Label>
+            <ui:Label name="game_over_level_completed" text="COMPLETED" class="header">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:83c560564cbdcfb419f2ae3c0b4c4b3b" entry="Id(3112251924480)" />
+                </Bindings>
+            </ui:Label>
+            <ui:Button name="game_over_primary_button" text="Skip" class="button">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:83c560564cbdcfb419f2ae3c0b4c4b3b" entry="Id(3355307646976)" />
+                </Bindings>
+            </ui:Button>
             <ui:VisualElement name="game_over_secondary_button">
                 <ui:VisualElement name="game_over_secondary_button_icon" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="game_over_quit_button">
-                <ui:VisualElement name="game_over_quit_button_icon" />
+            <ui:VisualElement name="game_over_quit_button_icon" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

@@ -44,7 +44,7 @@
 - Audio Mixer
 - Addressable
 - Daily Rewards
-- Gacha
+- Lucky Wheel
 - Inventory + Shop
 - Timeline
 - Loading Screen

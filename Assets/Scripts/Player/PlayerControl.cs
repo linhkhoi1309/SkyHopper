@@ -20,7 +20,7 @@ public class PlayerControl : MonoBehaviour
         if (isControlAllowed)
         {
             GetComponent<AudioSource>().Play();
-            rgbd2d.velocity = jumpSpeed;
+            rgbd2d.linearVelocity = jumpSpeed;
         }
     }
     public void EnableControl(bool controlAllow){
