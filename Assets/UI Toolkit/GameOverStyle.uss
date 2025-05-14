@@ -30,6 +30,7 @@
     justify-content: center;
     align-items: center;
     background-color: black;
+    position: relative;
 }
 
 .menu {
@@ -71,6 +72,26 @@
     scale: -1 1;
 }
 
-#game_over_secondary_button:focus, #game_over_secondary_button:hover{
+#game_over_secondary_button:focus, #game_over_secondary_button:hover, #game_over_quit_button:focus, #game_over_quit_button:hover {
     opacity: 0.5;
+}
+#game_over_quit_button{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-image: url("project://database/Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/Circle.png?fileID=-2413806693520163455&amp;guid=ebe73ca9363db456bacf42c025bb4847&amp;type=3#Circle");
+    -unity-background-image-tint-color: rgba(145, 145, 145, 0.93);
+    transition-property: opacity;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#game_over_quit_button_icon {
+    width: 40px;
+    height: 40px;
+    background-image: url("project://database/Assets/Sprites/Icons/sheet_white1x.png?fileID=-1017601493&amp;guid=ff0c2463219e89c4a8b12987893a7c8a&amp;type=3#sheet_white1x_7");
 }

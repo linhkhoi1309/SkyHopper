@@ -45,4 +45,9 @@ public class AudioManager : MonoBehaviour
     {
         musicSource.volume = volume;
     }
+
+    public bool IsMusicPlaying()
+    {
+        return musicSource.isPlaying && musicSource.clip != null;
+    }
 }

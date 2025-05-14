@@ -52,7 +52,7 @@ public class MainMenuUIEventHandler : MonoBehaviour
 
     private void Start()
     {
-        AudioManager.instance.PlayMusic(AudioManager.instance.mainMenuMusic);
+        if(!AudioManager.instance.IsMusicPlaying()) AudioManager.instance.PlayMusic(AudioManager.instance.mainMenuMusic);
         if (PlayerPrefs.HasKey(GlobalConfig.MUSIC_VOLUME_PREFS_KEY))
         {
             musicVolumeSlider.value = PlayerPrefs.GetFloat(GlobalConfig.MUSIC_VOLUME_PREFS_KEY);

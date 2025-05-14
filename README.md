@@ -21,7 +21,7 @@
 - Joint (Hinge Joint 2D)
 - Effector (Area Effector 2D)
 - Skinning Editor
-- Design Pattern / Game Programming Pattern: Singleton, Observer, Object Pool
+- Design Pattern / Game Programming Pattern: Singleton, Object Pool
 - Boids
 - Multithreaded Programming (Job System)
 - Burst Compiler

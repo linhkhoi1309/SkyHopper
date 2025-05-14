@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class GameOverMenuUIEventHandler : MonoBehaviour
     UIDocument uIDocument;
     Button primaryButton;
     VisualElement secondaryButton;
+    VisualElement quitButton;
     Level currentLevel;
     Label levelNameLabel;
     Label levelStateLabel;
@@ -26,10 +28,12 @@ public class GameOverMenuUIEventHandler : MonoBehaviour
         levelNameLabel = uIDocument.rootVisualElement.Q<Label>(name: "game_over_level_name");
         levelStateLabel = uIDocument.rootVisualElement.Q<Label>(name: "game_over_level_state");
         primaryButton = uIDocument.rootVisualElement.Q<Button>(name: "game_over_primary_button");
-        secondaryButton = uIDocument.rootVisualElement.Q<VisualElement>(name: "game_over_secondary_button_icon");
+        secondaryButton = uIDocument.rootVisualElement.Q<VisualElement>(name: "game_over_secondary_button");
+        quitButton = uIDocument.rootVisualElement.Q<VisualElement>(name: "game_over_quit_button");
 
         primaryButton.RegisterCallback<ClickEvent>(OnPrimaryButtonClicked);
         secondaryButton.RegisterCallback<ClickEvent, bool>(OnSecondaryButtonClicked, currentLevel.IsCompleted);
+        quitButton.RegisterCallback<ClickEvent>(OnQuitButtonClicked);
 
         if (currentLevel != null) levelNameLabel.text = "Level " + int.Parse(currentLevel.LevelName).ToString("D3");
         if (currentLevel.IsCompleted)
@@ -46,6 +50,12 @@ public class GameOverMenuUIEventHandler : MonoBehaviour
             levelStateLabel.text = "FAILED";
             primaryButton.text = "Skip";
         }
+    }
+
+    private void OnQuitButtonClicked(ClickEvent evt)
+    {
+        AudioManager.instance.PlaySound(AudioManager.instance.buttonClickedSound);
+        SceneManager.LoadScene(GlobalConfig.LEVEL_SCENE_BUILD_INDEX);
     }
 
     private void OnPrimaryButtonClicked(ClickEvent evt)
