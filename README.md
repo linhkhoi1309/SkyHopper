@@ -83,6 +83,7 @@
 - [SQLite-net, Frank A. Krueger](https://github.com/praeclarum/sqlite-net)
 - [NativeQuadtree, Marijn Zwemmer](https://github.com/marijnz/NativeQuadtree)
 - [DOTween, Documentation](https://dotween.demigiant.com/documentation.php)
+- [Unity Localization: Add support for Multiple Languages, Root Games](https://www.youtube.com/watch?v=qcXuvd7qSxg)
 - [Audios](https://opengameart.org/)
 - [Fonts](https://fonts.google.com/)
 - [Sprites](https://www.kenney.nl/assets)
