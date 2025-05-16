@@ -31,7 +31,9 @@ public class Player : MonoBehaviour
         explosionParticleSystem.Play();
         playerControl.EnableControl(false);
         AudioManager.instance.PlaySound(AudioManager.instance.crashSound);
+        #if UNITY_IPHONE || UNITY_ANDROID 
         Handheld.Vibrate();
+        #endif
         DatabaseManager.Instance.UpdateLevelCompletion(GameManager.instance.currentLevelId, false);
         GameManager.instance.GameOver();
     }
