@@ -63,7 +63,6 @@
     + Lower value -> more prioritized
 - Shield Effect
     + Create Shield Shader (Create -> Shader Graph -> URP -> Unlit Shader Graph)
-    ![Shield Shader Graph](https://private-user-images.githubusercontent.com/58393822/423108471-63b15c32-47fe-4a7a-b7bb-bd93186f7c02.PNG?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDM1MTk1MTIsIm5iZiI6MTc0MzUxOTIxMiwicGF0aCI6Ii81ODM5MzgyMi80MjMxMDg0NzEtNjNiMTVjMzItNDdmZS00YTdhLWI3YmItYmQ5MzE4NmY3YzAyLlBORz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA0MDElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNDAxVDE0NTMzMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTczMjdiMTVjNGJkN2EwMjRjMTcwNjAyYWVjODFlNDdhNWY3YzE3NzUxYzRlYzg5NjlmYWNmMzVlYmEwNzMxN2QmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.k7PDe48rxgAMqMqv1GEKFY46MiMEk-Ejc3Hc89iGd1c)
     + Create Shield Material
     + Create Shield Particle System (with only 1 particle generated and use Shield Material as material)
 - Integrating Unity UI Toolkit
@@ -76,6 +75,8 @@
 - [SCREEN SHAKE in Unity using Cinemachine, Sasquatch B Studios](https://www.youtube.com/watch?v=CgyLIWyDXqo&list=PLfmYNuLHEy-PQ6j6kki9kmM3Z5CayRSI0&index=4&ab_channel=SasquatchBStudios)
 - [Unity Manual, Unity](https://docs.unity3d.com/6000.0/Documentation/Manual/)
 - [Unity Universal RP Manual, Unity](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@7.1/manual/index.html)
+- [Unity Localization Package Manual, Unity](https://docs.unity3d.com/Packages/com.unity.localization@1.5/manual/index.html)
+- [Unity Shader GraphGraph Manual, Unity](https://docs.unity3d.com/Packages/com.unity.shadergraph@6.9/manual/index.html)
 - [OBJECT POOLING in Unity, Brackeys](https://www.youtube.com/watch?v=tdSmKaJvCoA&t=832s&ab_channel=Brackeys)
 - [Get started with UI Toolkit in Unity, Sasquatch B Studios](https://www.youtube.com/watch?v=_jtj73lu2Ko&t=317s&ab_channel=SasquatchBStudios)
 - [Boids, ECE 4760, Spring 2020, Adams/Land](https://people.ece.cornell.edu/land/courses/ece4760/labs/s2021/Boids/Boids.html)
