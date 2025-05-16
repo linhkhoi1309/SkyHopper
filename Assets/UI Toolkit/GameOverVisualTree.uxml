@@ -2,7 +2,17 @@
     <Style src="project://database/Assets/UI%20Toolkit/GameOverStyle.uss?fileID=7433441132597879392&amp;guid=3fcca9ede9846064fb641458e04f3fd6&amp;type=3#GameOverStyle" />
     <ui:VisualElement name="VisualElement" class="game_over_screen">
         <ui:VisualElement class="menu">
-            <ui:Label name="game_over_level_name" text="Level 000" class="header" />
+            <ui:Label name="game_over_level_name" text="Level 000" class="header">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:83c560564cbdcfb419f2ae3c0b4c4b3b" entry="Id(615262108491776)">
+                        <variables>
+                            <UnityEngine.Localization.LocalVariable name="level">
+                                <UnityEngine.Localization.SmartFormat.PersistentVariables.StringVariable value="000" />
+                            </UnityEngine.Localization.LocalVariable>
+                        </variables>
+                    </UnityEngine.Localization.LocalizedString>
+                </Bindings>
+            </ui:Label>
             <ui:Label name="game_over_level_failed" text="FAILED" class="header">
                 <Bindings>
                     <UnityEngine.Localization.LocalizedString property="text" table="GUID:83c560564cbdcfb419f2ae3c0b4c4b3b" entry="Id(2968408268800)" />

@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 83c560564cbdcfb419f2ae3c0b4c4b3b, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 8042593653765702107
   m_TableData:
   - m_Id: 714229915648
     m_Localized: Start
@@ -31,7 +32,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2839093682176
-    m_Localized: Pause
+    m_Localized: PAUSE
     m_Metadata:
       m_Items: []
   - m_Id: 2968408268800
@@ -46,6 +47,33 @@ MonoBehaviour:
     m_Localized: Skip
     m_Metadata:
       m_Items: []
+  - m_Id: 272956016795648
+    m_Localized: Close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 273016188280832
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 273061780365312
+    m_Localized: Music Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 273249731321856
+    m_Localized: SFX Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 615262108491776
+    m_Localized: Level {level}
+    m_Metadata:
+      m_Items:
+      - rid: 8042593653765702107
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 8042593653765702107
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 615262108491776

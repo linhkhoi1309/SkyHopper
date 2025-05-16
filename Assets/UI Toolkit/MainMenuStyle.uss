@@ -53,7 +53,7 @@
 .popup {
     position: absolute;
     width: 300px;
-    height: 200px;
+    height: 300px;
     background-color: #222;
     border-radius: 10px;
     padding: 15px;
@@ -89,7 +89,6 @@
 .popup-label {
     color: white;
     width: 100px;
-    flex-shrink: 0;
     margin-right: 10px;
     -unity-font-definition: initial;
     -unity-font: url("project://database/Assets/TextMesh%20Pro/Fonts/Tektur-VariableFont_wdth,wght.ttf");
@@ -102,7 +101,7 @@
 
 .popup-close-button {
     margin-top: 10px;
-    width: 100px;
+    width: 100%;
     background-color: white;
     color: black;
     -unity-font-definition: initial;
@@ -125,4 +124,15 @@
     translate: 0 20px; /* Moves it down for animation */
     visibility: hidden; /* Hides it from interaction but keeps it for animation */
     transition-timing-function: ease-in;
+}
+
+.popup-dropdown{
+    max-width: 65%;
+    flex-grow: 1;
+    background-color: #333;
+    color: black;
+    border-radius: 5px;
+    font-size: 16px;
+    -unity-font-definition: initial;
+    -unity-font: url("project://database/Assets/TextMesh%20Pro/Fonts/Tektur-VariableFont_wdth,wght.ttf");
 }

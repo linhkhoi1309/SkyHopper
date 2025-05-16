@@ -14,16 +14,40 @@
                 </Bindings>
             </ui:Button>
             <ui:VisualElement name="SettingsPopup" class="popup hidden">
-                <ui:Label text="Settings" class="popup-header" />
+                <ui:Label text="Settings" class="popup-header">
+                    <Bindings>
+                        <UnityEngine.Localization.LocalizedString property="text" table="GUID:83c560564cbdcfb419f2ae3c0b4c4b3b" entry="Id(1615887835136)" />
+                    </Bindings>
+                </ui:Label>
                 <ui:VisualElement class="popup-row">
-                    <ui:Label text="Music Volume" class="popup-label" />
+                    <ui:Label text="Music Volume" class="popup-label">
+                        <Bindings>
+                            <UnityEngine.Localization.LocalizedString property="text" table="GUID:83c560564cbdcfb419f2ae3c0b4c4b3b" entry="Id(273061780365312)" />
+                        </Bindings>
+                    </ui:Label>
                     <ui:Slider name="MusicSlider" low-value="0" high-value="1" value="0.5" class="popup-slider" />
                 </ui:VisualElement>
                 <ui:VisualElement class="popup-row">
-                    <ui:Label text="SFX Volume" class="popup-label" />
+                    <ui:Label text="SFX Volume" class="popup-label">
+                        <Bindings>
+                            <UnityEngine.Localization.LocalizedString property="text" table="GUID:83c560564cbdcfb419f2ae3c0b4c4b3b" entry="Id(273249731321856)" />
+                        </Bindings>
+                    </ui:Label>
                     <ui:Slider name="SfxSlider" low-value="0" high-value="1" value="0.5" class="popup-slider" />
                 </ui:VisualElement>
-                <ui:Button text="Close" name="CloseSettingsButton" class="popup-close-button" />
+                <ui:VisualElement class="popup-row">
+                    <ui:Label text="Language" class="popup-label">
+                        <Bindings>
+                            <UnityEngine.Localization.LocalizedString property="text" table="GUID:83c560564cbdcfb419f2ae3c0b4c4b3b" entry="Id(273016188280832)" />
+                        </Bindings>
+                    </ui:Label>
+                    <ui:DropdownField name="LanguageDropdown" choices="English,Tiếng Việt" value="English" class="popup-dropdown" />
+                </ui:VisualElement>
+                <ui:Button text="Close" name="CloseSettingsButton" class="popup-close-button">
+                    <Bindings>
+                        <UnityEngine.Localization.LocalizedString property="text" table="GUID:83c560564cbdcfb419f2ae3c0b4c4b3b" entry="Id(272956016795648)" />
+                    </Bindings>
+                </ui:Button>
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

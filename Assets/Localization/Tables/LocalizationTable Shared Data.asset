@@ -43,6 +43,26 @@ MonoBehaviour:
     m_Key: skip
     m_Metadata:
       m_Items: []
+  - m_Id: 272956016795648
+    m_Key: close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 273016188280832
+    m_Key: language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 273061780365312
+    m_Key: musicVolume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 273249731321856
+    m_Key: sfxVolume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 615262108491776
+    m_Key: level
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

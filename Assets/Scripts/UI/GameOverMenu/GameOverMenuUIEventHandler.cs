@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.SmartFormat.PersistentVariables;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
@@ -39,7 +41,7 @@ public class GameOverMenuUIEventHandler : MonoBehaviour
         secondaryButton.RegisterCallback<ClickEvent, bool>(OnSecondaryButtonClicked, currentLevel.IsCompleted);
         quitButton.RegisterCallback<ClickEvent>(OnQuitButtonClicked);
 
-        if (currentLevel != null) levelNameLabel.text = "Level " + int.Parse(currentLevel.LevelName).ToString("D3");
+        LocalizeLevelName();
         if (currentLevel.IsCompleted)
         {
             primaryButton.style.display = DisplayStyle.None;
@@ -76,5 +78,13 @@ public class GameOverMenuUIEventHandler : MonoBehaviour
                 SceneManager.LoadScene(currentLevel.LevelSceneBuildIndex + 1);
         }
         else SceneManager.LoadScene(currentLevel.LevelSceneBuildIndex);
+    }
+
+    private void LocalizeLevelName(){
+        if (currentLevel != null) {
+            var binding = levelNameLabel.GetBinding("text") as LocalizedString;
+            var levelName = binding["level"] as StringVariable;
+            levelName.Value = int.Parse(currentLevel.LevelName).ToString("D3");
+        }
     }
 }
