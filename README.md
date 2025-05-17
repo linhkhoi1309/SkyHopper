@@ -35,7 +35,7 @@
 - Unity Web Request
 - Scene Transition 
 - Text Animation
-- Unity Ads + In-App purchase + Monetization & Tracking tools
+- Google Admob + In-App purchase + Monetization & Tracking tools
 - Mobile Native API (Push Notifications, Vibration, Accelerometer)
 - Localization
 
@@ -84,6 +84,7 @@
 - [NativeQuadtree, Marijn Zwemmer](https://github.com/marijnz/NativeQuadtree)
 - [DOTween, Documentation](https://dotween.demigiant.com/documentation.php)
 - [Unity Localization: Add support for Multiple Languages, Root Games](https://www.youtube.com/watch?v=qcXuvd7qSxg)
+- [Mobile Ads SDK(Unity), Google Admob](https://developers.google.com/admob/unity/quick-start)
 - [Audios](https://opengameart.org/)
 - [Fonts](https://fonts.google.com/)
 - [Sprites](https://www.kenney.nl/assets)

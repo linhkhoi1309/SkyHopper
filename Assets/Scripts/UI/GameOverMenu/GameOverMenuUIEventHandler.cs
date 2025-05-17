@@ -18,12 +18,14 @@ public class GameOverMenuUIEventHandler : MonoBehaviour
     Label levelNameLabel;
     Label levelFailedLabel;
     Label levelCompletedLabel;
+    AdsManager adsManager;
 
     [SerializeField] Sprite nextLevelIcon;
 
     private void Awake()
     {
         uIDocument = GetComponent<UIDocument>();
+        adsManager = FindObjectOfType<AdsManager>();
     }
     void Start()
     {
@@ -57,6 +59,20 @@ public class GameOverMenuUIEventHandler : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        adsManager.OnRewardedAdClosedEvent += OnRewardedAdClosed;
+    }
+
+    private void OnRewardedAdClosed()
+    {
+        if (currentLevel.LevelSceneBuildIndex + 1 <= GameManager.instance.levels.Count)
+        {
+            SceneManager.LoadScene(currentLevel.LevelSceneBuildIndex + 1);
+            GameManager.instance.SetCurrentLevelId(currentLevel.Id + 1);
+        }
+    }
+
     private void OnQuitButtonClicked(ClickEvent evt)
     {
         AudioManager.instance.PlaySound(AudioManager.instance.buttonClickedSound);
@@ -66,25 +82,32 @@ public class GameOverMenuUIEventHandler : MonoBehaviour
     private void OnPrimaryButtonClicked(ClickEvent evt)
     {
         AudioManager.instance.PlaySound(AudioManager.instance.buttonClickedSound);
-        if (currentLevel.LevelSceneBuildIndex + 1 <= GameManager.instance.levels.Count)
-            SceneManager.LoadScene(currentLevel.LevelSceneBuildIndex + 1);
+        if (currentLevel.LevelSceneBuildIndex + 1 <= GameManager.instance.levels.Count){
+            adsManager.ShowRewardedAd();
+        }
     }
     private void OnSecondaryButtonClicked(ClickEvent evt, bool isCompleted)
     {
         AudioManager.instance.PlaySound(AudioManager.instance.buttonClickedSound);
         if (isCompleted)
         {
-            if (currentLevel.LevelSceneBuildIndex + 1 <= GameManager.instance.levels.Count)
+            if (currentLevel.LevelSceneBuildIndex + 1 <= GameManager.instance.levels.Count){
                 SceneManager.LoadScene(currentLevel.LevelSceneBuildIndex + 1);
+                GameManager.instance.SetCurrentLevelId(currentLevel.Id + 1);
+            }
         }
         else SceneManager.LoadScene(currentLevel.LevelSceneBuildIndex);
     }
-
     private void LocalizeLevelName(){
         if (currentLevel != null) {
             var binding = levelNameLabel.GetBinding("text") as LocalizedString;
             var levelName = binding["level"] as StringVariable;
             levelName.Value = int.Parse(currentLevel.LevelName).ToString("D3");
         }
+    }
+
+    private void OnDisable()
+    {
+        adsManager.OnRewardedAdClosedEvent -= OnRewardedAdClosed;
     }
 }
