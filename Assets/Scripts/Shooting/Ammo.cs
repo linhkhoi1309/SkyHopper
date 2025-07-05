@@ -1,15 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[DisallowMultipleComponent]
 public class Ammo : MonoBehaviour
 {
-    [SerializeField] float ammoSpeed;
-    [SerializeField] float ammoRange;
-
+    [SerializeField] AmmoSO ammoSO;
     public void Move(Vector3 origin, Vector3 directionVector)
     {
-        Vector3 targetPosition = origin + directionVector.normalized * ammoRange;
+        Vector3 targetPosition = origin + directionVector.normalized * ammoSO.ammoRange;
         StartCoroutine(MoveAmmoRoutine(targetPosition));
     }
 
@@ -17,7 +15,7 @@ public class Ammo : MonoBehaviour
     {
         while (Vector3.Distance(transform.position, target) > 0.1f)
         {
-            transform.position = Vector3.MoveTowards(transform.position, target, ammoSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, target, ammoSO.ammoSpeed * Time.deltaTime);
             yield return null;
         }
         ObjectPoolManager.instance.ReturnToPool(gameObject.tag, gameObject);

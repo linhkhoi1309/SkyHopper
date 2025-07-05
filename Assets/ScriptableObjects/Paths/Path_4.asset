@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Path_4
   m_EditorClassIdentifier: 
   waypointsPositions:
-  - {x: 2.5, y: 50, z: 0}
-  - {x: 5, y: 50, z: 0}
+  - {x: 2.5, y: 16.5, z: 0}
+  - {x: 5, y: 16.5, z: 0}
   gameObjectArray:
   - {fileID: 6913532253720247725, guid: b63353687e926384299f1e41d06aada8, type: 3}
-  minSpeed: 10
-  maxSpeed: 10
-  delayTime: 1
+  minSpeed: 8
+  maxSpeed: 8
+  delayTime: 2
   interval: 0
   pingPong: 1
   infiniteSpawning: 0

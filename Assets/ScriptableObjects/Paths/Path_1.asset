@@ -13,14 +13,19 @@ MonoBehaviour:
   m_Name: Path_1
   m_EditorClassIdentifier: 
   waypointsPositions:
-  - {x: 5.72, y: 12.4800005, z: 0.38465396}
-  - {x: 3.58, y: 13.97, z: 0.38465396}
-  - {x: 1, y: 15.77, z: 0.38465396}
-  - {x: -1.5699999, y: 17.44, z: 0.38465396}
-  - {x: -4.3199997, y: 18.89, z: 0.38465396}
-  - {x: -6.72, y: 20.51, z: 0.38465396}
+  - {x: 6.1299996, y: 2.8000002, z: 0}
+  - {x: 3.9899998, y: 4.29, z: 0}
+  - {x: 1.41, y: 6.09, z: 0}
+  - {x: -1.1600001, y: 7.76, z: 0}
+  - {x: -3.9099998, y: 9.21, z: 0}
+  - {x: -6.31, y: 10.83, z: 0}
   gameObjectArray:
   - {fileID: 7745825553858620592, guid: 12e9150a7cf46c245b94ee594f413328, type: 3}
-  minSpeed: 10
-  maxSpeed: 10
-  interval: 0.4
+  minSpeed: 6
+  maxSpeed: 6
+  delayTime: 0
+  interval: 1
+  intervalVariation: 0
+  pingPong: 0
+  infiniteSpawning: 1
+  maxSpawnedObjects: 0

@@ -5,10 +5,11 @@ public class AudioManager : MonoBehaviour
     [Header("Sound Effects")]
     public AudioClip buttonClickedSound;
     public AudioClip crashSound;
-
     public AudioClip completeSound;
+
     [Header("Music")]
     public AudioClip mainMenuMusic;
+    
     [Header("Audio Sources")]
     public AudioSource SFXsource;
     public AudioSource musicSource;

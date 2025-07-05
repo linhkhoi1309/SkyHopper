@@ -1,29 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
 using Vector2 = UnityEngine.Vector2;
 
 public class PlayerControl : MonoBehaviour
 {
-    Rigidbody2D rgbd2d;
     [SerializeField] Vector2 jumpSpeed = new Vector2(0f, 10f);
-
-    public bool isControlAllowed = true;
+    Rigidbody2D playerRgbd2d;
+    public bool isControlEnabled = true;
+    AudioSource playerAudioSource;
     void Start()
     {
-        rgbd2d = GetComponent<Rigidbody2D>();
+        playerRgbd2d = GetComponent<Rigidbody2D>();
+        playerAudioSource = GetComponent<AudioSource>();
     }
 
     public void OnJump()
     {
-        if (isControlAllowed)
+        if (isControlEnabled)
         {
-            GetComponent<AudioSource>().Play();
-            rgbd2d.linearVelocity = jumpSpeed;
+            playerAudioSource.Play();
+            playerRgbd2d.linearVelocity = jumpSpeed;
         }
     }
-    public void EnableControl(bool controlAllow){
-        isControlAllowed = controlAllow;
+    public void EnableControl(bool isEnabled)
+    {
+        isControlEnabled = isEnabled;
     }
 }

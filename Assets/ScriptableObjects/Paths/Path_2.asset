@@ -17,8 +17,9 @@ MonoBehaviour:
   - {x: 4.13, y: 24.31, z: 0}
   gameObjectArray:
   - {fileID: 7745825553858620592, guid: fd4f0ca900b802641aca17ba838c0806, type: 3}
-  minSpeed: 10
-  maxSpeed: 10
+  minSpeed: 8
+  maxSpeed: 8
+  delayTime: 0
   interval: 0
   pingPong: 1
   infiniteSpawning: 0

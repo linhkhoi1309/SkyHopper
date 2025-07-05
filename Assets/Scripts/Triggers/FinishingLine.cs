@@ -1,18 +1,20 @@
 using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 
+[DisallowMultipleComponent]
+[RequireComponent(typeof(SpriteRenderer))]
 public class FinishingLine : MonoBehaviour
 {
+    public float blinkDuration = 0.5f;
+    public bool isBlinking = true;
+
     SpriteRenderer spriteRenderer;
-    public float blinkDuration = 0.5f; 
-    public bool isBlinking = true; 
     Player player;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        player = FindObjectOfType<Player>();
+        player = FindFirstObjectByType<Player>();
     }
     private void Start()
     {
@@ -48,13 +50,13 @@ public class FinishingLine : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && !player.hasCompleted)
+        if (collision.CompareTag(GlobalConfig.PLAYER_TAG) && !player.hasCompleted)
         {
             AudioManager.instance.PlaySound(AudioManager.instance.completeSound);
             player.hasCompleted = true;
             DatabaseManager.Instance.UpdateLevelCompletion(GameManager.instance.currentLevelId, true);
-            if(GameManager.instance.currentLevelId + 1 <= GameManager.instance.levels.Count) 
-            DatabaseManager.Instance.UpdateLevelUnlockStatus(GameManager.instance.currentLevelId + 1, true);
+            if (GameManager.instance.currentLevelId + 1 <= GameManager.instance.levels.Count)
+                DatabaseManager.Instance.UpdateLevelUnlockStatus(GameManager.instance.currentLevelId + 1, true);
             GameManager.instance.GameOver();
         }
     }

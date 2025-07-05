@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,20 +6,23 @@ using Random = UnityEngine.Random;
 [DisallowMultipleComponent]
 public class PathMovement : MonoBehaviour
 {
-    [HideInInspector] PathSO pathSO;
-    private float speed;
-
+    PathSO pathSO;
+    float speed;
     List<Vector3> waypointsPositions;
-
     int currentWaypoint;
 
-    public void MovePath(PathSO pathSO)
+    private void InitializePath(PathSO pathSO)
     {
         this.pathSO = pathSO;
         currentWaypoint = 0;
         waypointsPositions = pathSO.waypointsPositions;
-        speed = GetPathSpeed();
+        speed = GetPathSpeed(pathSO.minSpeed, pathSO.maxSpeed);
         transform.position = waypointsPositions[currentWaypoint];
+    }
+
+    public void MovePath(PathSO pathSO)
+    {
+        InitializePath(pathSO);
         StartCoroutine(MovePathRoutine());
     }
 
@@ -46,8 +48,8 @@ public class PathMovement : MonoBehaviour
         }
         if (!pathSO.pingPong) ObjectPoolManager.instance.ReturnToPool(gameObject.tag, gameObject);
     }
-    private float GetPathSpeed()
+    private float GetPathSpeed(float minSpeed, float maxSpeed)
     {
-        return Random.Range(pathSO.minSpeed, pathSO.maxSpeed);
+        return Random.Range(minSpeed, maxSpeed);
     }
 }

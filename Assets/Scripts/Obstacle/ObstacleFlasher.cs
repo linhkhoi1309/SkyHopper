@@ -1,15 +1,17 @@
 using System.Collections;
 using UnityEngine;
 
+[DisallowMultipleComponent]
 public class ObstacleFlasher : MonoBehaviour
 {
+    [Tooltip("Minimum duration for the flash effect in seconds")]
     [SerializeField] private float minFlashDuration = 1f;
+    
+    [Tooltip("Maximum duration for the flash effect in seconds")]
     [SerializeField] private float maxFlashDuration = 2f;
-    private Renderer obstacleRenderer;
 
     void Start()
     {
-        obstacleRenderer = GetComponent<Renderer>();
         StartCoroutine(FlashRoutine());
     }
 
@@ -17,10 +19,9 @@ public class ObstacleFlasher : MonoBehaviour
     {
         while (true)
         {
-            obstacleRenderer.enabled = false;
+            gameObject.SetActive(false);
             yield return new WaitForSeconds(GetFlashDuration());
-
-            obstacleRenderer.enabled = true;
+            gameObject.SetActive(true);
             yield return new WaitForSeconds(GetFlashDuration());
         }
     }

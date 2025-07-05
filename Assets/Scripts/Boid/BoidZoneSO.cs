@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Boid/BoidZoneSO", fileName = "BoidZone_")]
+[CreateAssetMenu(menuName = "Scriptable Objects/Boid/BoidZoneSO", fileName = "BoidZone_")]
 public class BoidZoneSO : ScriptableObject
 {
     public Vector2 minBounds;

@@ -1,14 +1,19 @@
 using UnityEngine;
 using System.Collections;
 
+[DisallowMultipleComponent]
 public class ObstacleScaler : MonoBehaviour
 {
-    [SerializeField] private Vector3 targetScale = new Vector3(2f, 2f, 2f);
-    [SerializeField] private float scaleDuration = 1f;
-    [SerializeField] private float delayTime = 0.5f;
+    [Tooltip("Target scale to scale to")]
+    [SerializeField] Vector3 targetScale = new Vector3(2f, 2f, 2f);
 
-    private Vector3 initialScale;
-    private bool scalingUp = true;
+    [Tooltip("Duration to scale from initial scale to target scale")]
+    [SerializeField] float scaleDuration = 1f;
+
+    [Tooltip("Time to wait before scaling to next scale")]
+    [SerializeField] float delayTime = 0.5f;
+    Vector3 initialScale;
+    bool scalingToTarget = true;
 
     void Start()
     {
@@ -20,8 +25,8 @@ public class ObstacleScaler : MonoBehaviour
     {
         while (true)
         {
-            Vector3 startScale = scalingUp ? initialScale : targetScale;
-            Vector3 endScale = scalingUp ? targetScale : initialScale;
+            Vector3 startScale = scalingToTarget ? initialScale : targetScale;
+            Vector3 endScale = scalingToTarget ? targetScale : initialScale;
 
             float timer = 0f;
             while (timer < scaleDuration)
@@ -32,10 +37,8 @@ public class ObstacleScaler : MonoBehaviour
                 yield return null;
             }
             transform.localScale = endScale;
-
-            yield return new WaitForSeconds(delayTime); 
-
-            scalingUp = !scalingUp; 
+            yield return new WaitForSeconds(delayTime);
+            scalingToTarget = !scalingToTarget;
         }
     }
 }

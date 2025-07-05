@@ -5,13 +5,18 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class CircleObstacle : MonoBehaviour
 {
+    [Tooltip("Radius of the circle in world units")]
+    [SerializeField, Min(0f)] float radius = 1.5f;
+
+    [Tooltip("Number of steps to create the circle. More steps means a smoother circle but higher performance cost.")]
+    [SerializeField, Min(0)] int steps = 100;
+
+    [Tooltip("Percentage of the circle that is a gap. 0 means no gap, 1 means full gap (no circle).")]
+    [Range(0f, 1f)]
+    [SerializeField] float gapSizePercent = 0.2f;
+
     LineRenderer circleRenderer;
     EdgeCollider2D edgeCollider;
-
-    [SerializeField] private float radius = 1.5f;
-    [SerializeField] private int steps = 100;
-    [SerializeField] private float gapSizePercent = 0.2f;
-
     List<Vector2> colliderPoints = new List<Vector2>();
 
     private void Awake()
@@ -28,7 +33,7 @@ public class CircleObstacle : MonoBehaviour
     void DrawCircle()
     {
         colliderPoints.Clear();
-        circleRenderer.positionCount = steps;
+        circleRenderer.positionCount = steps + 1;
         for (int currentStep = 0; currentStep <= steps; currentStep++)
         {
             float circumferenceProgress = (float)currentStep / steps;

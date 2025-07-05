@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.justinpbarnett.unity-mcp": "https://github.com/justinpbarnett/unity-mcp.git?path=/UnityMcpBridge",
     "com.unity.cinemachine": "2.10.3",
     "com.unity.feature.2d": "2.0.1",
     "com.unity.ide.visualstudio": "2.0.23",

@@ -2,7 +2,7 @@
 
 #### This game is served for ***educational purposes*** only. Please contact to *linhkhoiluong@gmail.com* before using it as references.
 ---
-### Mechanics + Techniques
+### Techniques used
 
 - Version Control (Git)
 - Scriptable Render Pipeline (URP)
@@ -29,15 +29,13 @@
 - Quadtree
 - A* pathfinding
 - DOTween
-- Optimization Techniques (Profiler)
-- Debugging Techniques (Gizmo)
+- Optimization (Profiler)
+- Debugging (Gizmo)
 - Save & Loading System (SQLite-net + StreammingAssets, PlayerPrefs)
 - Unity Web Request
-- Scene Transition 
-- Text Animation
 - Google Admob + In-App purchase + Monetization & Tracking tools
-- Mobile Native API (Push Notifications, Vibration, Accelerometer)
 - Localization
+- Unity MCP
 
 ### Ongoing features
 - Raycast
@@ -48,6 +46,9 @@
 - Inventory + Shop
 - Timeline
 - Loading Screen
+- Scene Transition 
+- Text Animation
+- Mobile Native API (Push Notifications, Vibration, Accelerometer)
 
 ### Notes
 - URP Setup:

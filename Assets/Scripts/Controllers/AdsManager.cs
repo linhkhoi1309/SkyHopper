@@ -10,7 +10,6 @@ public class AdsManager : MonoBehaviour
     string rewardedId = "ca-app-pub-3940256099942544/1712485313";
     #endif
     RewardedAd rewardedAd;
-
     public event Action OnRewardedAdClosedEvent;
     public event Action OnRewardedAdShownEvent;
     

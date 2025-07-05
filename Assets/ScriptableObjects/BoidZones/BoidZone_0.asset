@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f294da322cc6f9d49bfd2a9623d01117, type: 3}
   m_Name: BoidZone_0
   m_EditorClassIdentifier: 
-  minBounds: {x: -5, y: 90}
-  maxBounds: {x: 5, y: 100}
+  minBounds: {x: -5, y: 20}
+  maxBounds: {x: 5, y: 0}
   minSpeed: 5
   maxSpeed: 7
   turnFactor: 0.2

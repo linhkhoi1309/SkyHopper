@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 [DisallowMultipleComponent]
-[RequireComponent(typeof(PlayerControl))]
+[RequireComponent(typeof(PlayerControl),typeof(CinemachineImpulseSource))]
 public class Player : MonoBehaviour
 {
     [HideInInspector] public CinemachineImpulseSource cinemachineImpulseSource;
@@ -26,12 +23,12 @@ public class Player : MonoBehaviour
     }
 
     public void Lost(){
-        CameraShakeManager.instance.ShakeCamera(cinemachineImpulseSource);
         hasLost = true;
+        CameraShakeManager.instance.ShakeCamera(cinemachineImpulseSource);
         explosionParticleSystem.Play();
-        playerControl.EnableControl(false);
-        AudioManager.instance.PlaySound(AudioManager.instance.crashSound);
-        #if UNITY_IPHONE || UNITY_ANDROID 
+        playerControl.EnableControl(false);        
+        AudioManager.instance.PlaySound(AudioManager.instance.crashSound);        
+        #if UNITY_IPHONE || UNITY_ANDROID
         Handheld.Vibrate();
         #endif
         DatabaseManager.Instance.UpdateLevelCompletion(GameManager.instance.currentLevelId, false);
