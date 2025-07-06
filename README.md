@@ -23,13 +23,11 @@
 - Skinning Editor
 - Design Pattern / Game Programming Pattern: Singleton, Object Pool
 - Boids
-- Multithreaded Programming (Job System)
-- Burst Compiler
+- Multithreaded Programming (Job System + Burst Compile)
 - DOTween
 - Optimization (Profiler)
 - Debugging (Gizmo)
 - Save & Loading System (SQLite-net + StreammingAssets, PlayerPrefs)
-- Unity Web Request
 - Google Admob + In-App purchase + Monetization & Tracking tools
 - Localization
 - Unity MCP
@@ -49,6 +47,15 @@
 - Scene Transition 
 - Text Animation
 - Mobile Native API (Push Notifications, Vibration, Accelerometer)
+
+### Level Design
+
+- Level 1: Spinning Circle + Ping Pong
+- Level 2: Trapdoor + Fan
+- Level 3: Clockhand + Spaceship
+- Level 4: Boidzone
+- Level 5: Dual Shooter + Dual Flow/Stream
+- Level 6: 
 
 ### Notes
 - URP Setup:
@@ -71,6 +78,15 @@
     + Project -> Create -> UI Toolkit -> UI Document
     + Drag newly created Visual Tree Asset to UI Document component
     + Tuning settings in Panel Settings
+
+- Localization:
+    + Install Localization in Package Manager (Window -> Package Manager -> Unity Registry -> Install)
+    + Edit -> Project Settings -> Localization -> Add locale (Add languages that you want to support for your game)
+    + Set default language in Project Locale Identifier & Specific Locale Selector
+    + Windows -> Assets Management -> Localization Tables -> Add entry
+    + Unity UI Toolkit: UI Builder -> Text -> Add bindings (only available in Unity 6+)
+    + Unity UI: Add Localize String Event component -> Set string reference -> Set update string (object: Text Object, function: TextMeshProUGUI.text) 
+    + Must create addressable build: Window -> Asset Management -> Addressable -> Groups -> New Build
 
 ### References
 - [SCREEN SHAKE in Unity using Cinemachine, Sasquatch B Studios](https://www.youtube.com/watch?v=CgyLIWyDXqo&list=PLfmYNuLHEy-PQ6j6kki9kmM3Z5CayRSI0&index=4&ab_channel=SasquatchBStudios)
