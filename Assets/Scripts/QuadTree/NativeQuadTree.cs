@@ -32,13 +32,6 @@ namespace NativeQuadTree
 	/// </summary>
 	public unsafe partial struct NativeQuadTree<T> : IDisposable where T : unmanaged
 	{
-#if ENABLE_UNITY_COLLECTIONS_CHECKS
-		// Safety
-		AtomicSafetyHandle safetyHandle;
-		[NativeSetClassTypeToNullOnSchedule]
-		DisposeSentinel disposeSentinel;
-#endif
-		// Data
 		[NativeDisableUnsafePtrRestriction]
 		UnsafeList<QuadElement<T>>* elements;
 
@@ -75,12 +68,6 @@ namespace NativeQuadTree
 				throw new InvalidOperationException();
 			}
 
-#if ENABLE_UNITY_COLLECTIONS_CHECKS
-			// TODO: Find out what the equivalent of this is in latest entities
-            // CollectionHelper.CheckIsUnmanaged<T>();
-			DisposeSentinel.Create(out safetyHandle, out disposeSentinel, 1, allocator);
-#endif
-
 			// Allocate memory for every depth, the nodes on all depths are stored in a single continuous array
 			var totalSize = LookupTables.DepthSizeLookup[maxDepth+1];
 
@@ -104,10 +91,6 @@ namespace NativeQuadTree
 			// Always have to clear before bulk insert as otherwise the lookup and node allocations need to account
 			// for existing data.
 			Clear();
-
-#if ENABLE_UNITY_COLLECTIONS_CHECKS
-			AtomicSafetyHandle.CheckWriteAndBumpSecondaryVersion(safetyHandle);
-#endif
 
 			// Resize if needed
 			if(elements->Capacity < elementsCount + incomingElements.Length)
@@ -205,17 +188,11 @@ namespace NativeQuadTree
 
 		public void RangeQuery(AABB2D bounds, NativeList<QuadElement<T>> results)
 		{
-#if ENABLE_UNITY_COLLECTIONS_CHECKS
-			AtomicSafetyHandle.CheckReadAndThrow(safetyHandle);
-#endif
 			new QuadTreeRangeQuery().Query(this, bounds, results);
 		}
 
 		public void Clear()
 		{
-#if ENABLE_UNITY_COLLECTIONS_CHECKS
-			AtomicSafetyHandle.CheckWriteAndBumpSecondaryVersion(safetyHandle);
-#endif
 			UnsafeUtility.MemClear(lookup->Ptr, lookup->Capacity * UnsafeUtility.SizeOf<int>());
 			UnsafeUtility.MemClear(nodes->Ptr, nodes->Capacity * UnsafeUtility.SizeOf<QuadNode>());
 			UnsafeUtility.MemClear(elements->Ptr, elements->Capacity * UnsafeUtility.SizeOf<QuadElement<T>>());
@@ -230,9 +207,6 @@ namespace NativeQuadTree
 			lookup = null;
 			UnsafeList<QuadNode>.Destroy(nodes);
 			nodes = null;
-#if ENABLE_UNITY_COLLECTIONS_CHECKS
-			DisposeSentinel.Dispose(ref safetyHandle, ref disposeSentinel);
-#endif
 		}
 	}
 }

@@ -1,8 +1,6 @@
-namespace NativeQuadTree
+public static class LookupTables
 {
-	public static class LookupTables
-	{
-		public static readonly ushort[] MortonLookup = {
+	public static readonly ushort[] MortonLookup = {
 		//	0       1       100     101     10000   10001   10100   10101
 			0x0000, 0x0001, 0x0004, 0x0005, 0x0010, 0x0011, 0x0014, 0x0015,
 		//	1000000	1000001	1000100	1000101	1010000	1010001	1010100	1010101
@@ -40,8 +38,8 @@ namespace NativeQuadTree
 			0x5540, 0x5541, 0x5544, 0x5545, 0x5550, 0x5551, 0x5554, 0x5555
 		};
 
-		public static readonly int[] DepthSizeLookup =
-		{
+	public static readonly int[] DepthSizeLookup =
+	{
 			0,
 			1,
 			1+2*2,
@@ -54,8 +52,8 @@ namespace NativeQuadTree
 			1+2*2+4*4+8*8+16*16+32*32+64*64+128*128+256*256,
 		};
 
-		public static readonly int[] DepthLookup =
-		{
+	public static readonly int[] DepthLookup =
+	{
 			0,
 			2,
 			4,
@@ -66,5 +64,4 @@ namespace NativeQuadTree
 			128,
 			256,
 		};
-	}
 }

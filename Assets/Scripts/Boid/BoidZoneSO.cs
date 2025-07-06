@@ -3,29 +3,39 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Scriptable Objects/Boid/BoidZoneSO", fileName = "BoidZone_")]
 public class BoidZoneSO : ScriptableObject
 {
+    [Tooltip("Minimum bounds of the boid zone. This defines the lower left corner of the zone.")]
     public Vector2 minBounds;
-    public Vector2 maxBounds;
-    public float minSpeed;
-    public float maxSpeed;
-    public float turnFactor;
-    public float matchingFactor;
-    public float avoidFactor;
-    public float centeringFactor;
-    public float visualRange;
-    public float protectedRange;
-    public int numOfBoids;
-    public GameObject boidPrefab;
 
-#if UNITY_EDITOR
-    public void OnValidate()
-    {
-        if (boidPrefab != null)
-        {
-            if (boidPrefab.GetComponent<Boid>() == null)
-            {
-                boidPrefab.AddComponent<Boid>(); // make sure it has a Boid component
-            }
-        }
-    }
-#endif
+    [Tooltip("Maximum bounds of the boid zone. This defines the upper right corner of the zone.")]
+    public Vector2 maxBounds;
+    
+    [Tooltip("Minimum speed of the boids")]
+    public float minSpeed;
+
+    [Tooltip("Maximum speed of the boids")]
+    public float maxSpeed;
+
+    [Tooltip("Acceleration factor for the boids")]
+    public float turnFactor;
+
+    [Tooltip("Factor for matching the velocity of nearby boids")]
+    public float matchingFactor;
+
+    [Tooltip("Factor for avoiding nearby boids")]
+    public float avoidFactor;
+
+    [Tooltip("Factor for centering the boids within the zone")]
+    public float centeringFactor;
+
+    [Tooltip("Range within which boids can see each other")]
+    public float visualRange;
+
+    [Tooltip("Range within which boids will avoid each other")]
+    public float protectedRange;
+
+    [Tooltip("Number of boids to spawn in this zone")]
+    public int numOfBoids;
+
+    [Tooltip("Prefab for the boid object")]
+    public GameObject boidPrefab;
 }

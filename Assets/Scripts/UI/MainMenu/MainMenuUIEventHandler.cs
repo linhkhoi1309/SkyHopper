@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
@@ -19,6 +16,8 @@ public class MainMenuUIEventHandler : MonoBehaviour
     private void Awake()
     {
         uIDocument = GetComponent<UIDocument>();
+
+        // Find UI elements by their names
         startButton = uIDocument.rootVisualElement.Q<Button>(GlobalConfig.START_BUTTON_NAME);
         settingsButton = uIDocument.rootVisualElement.Q<Button>(GlobalConfig.SETTINGS_BUTTON_NAME);
         closePopupButton = uIDocument.rootVisualElement.Q<Button>(GlobalConfig.POPUP_SETTINGS_CLOSE_BUTTON_NAME);
@@ -26,6 +25,8 @@ public class MainMenuUIEventHandler : MonoBehaviour
         musicVolumeSlider = uIDocument.rootVisualElement.Q<Slider>(GlobalConfig.MUSIC_VOLUME_SLIDER_NAME);
         soundVolumeSlider = uIDocument.rootVisualElement.Q<Slider>(GlobalConfig.SOUND_VOLUME_SLIDER_NAME);
         languageDropdown = uIDocument.rootVisualElement.Q<DropdownField>(GlobalConfig.LANGUAGE_DROPDOWN_NAME);
+
+        // Register callbacks for UI events
         startButton.RegisterCallback<ClickEvent>(OnStartGameButtonClicked);
         settingsButton.RegisterCallback<ClickEvent>(OnSettingsButtonClicked);
         closePopupButton.RegisterCallback<ClickEvent>(OnClosePopupButtonClicked);

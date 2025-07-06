@@ -34,7 +34,7 @@ public class LevelMenuUIEventHandler : MonoBehaviour
             Button button = new Button();
             button.AddToClassList("level_button");
             if (!levels[i].IsUnlocked) button.AddToClassList("level_button_locked");
-            button.text = levels[i].LevelName; 
+            button.text = levels[i].Id.ToString(); 
             scrollView.Add(button);
             button.RegisterCallback<ClickEvent, Level>(OnLevelButtonClicked, levels[i]);
         }

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eff581df781ed8f46aab2f2707ab3fb3, type: 3}
   m_Name: Ammo_1
   m_EditorClassIdentifier: 
-  ammoSpeed: 20
-  ammoRange: 10
+  ammoSpeed: 10
+  ammoRange: 7

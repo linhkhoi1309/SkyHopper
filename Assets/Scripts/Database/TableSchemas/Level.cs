@@ -6,9 +6,6 @@ public class Level {
     [Column("id")]		
     public int Id { get; set; }	
 
-    [Column("levelName")]
-    public string LevelName { get; set; }
-
     [Column("levelSceneBuildIndex")]
     public int LevelSceneBuildIndex { get; set; }
 

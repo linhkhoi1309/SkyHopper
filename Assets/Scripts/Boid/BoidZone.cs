@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Mathematics;
@@ -6,15 +5,16 @@ using UnityEngine;
 using UnityEngine.Jobs;
 using Unity.Jobs;
 using Random = UnityEngine.Random;
+using Vector3 = UnityEngine.Vector3;
+using Quaternion = UnityEngine.Quaternion;
 
 [DisallowMultipleComponent]
 public class BoidZone : MonoBehaviour
 {
     [SerializeField] BoidZoneSO boidZoneSO;
-
-    List<Boid> boids = new List<Boid>();
     TransformAccessArray transformAccessArray;
     NativeArray<BoidData> boidData;
+    NativeArray<BoidData> updatedData;
 
     struct BoidData
     {
@@ -33,9 +33,9 @@ public class BoidZone : MonoBehaviour
 
     void Start()
     {
-        boids = new List<Boid>(boidZoneSO.numOfBoids);
         transformAccessArray = new TransformAccessArray(boidZoneSO.numOfBoids);
         boidData = new NativeArray<BoidData>(boidZoneSO.numOfBoids, Allocator.Persistent);
+        updatedData = new NativeArray<BoidData>(boidZoneSO.numOfBoids, Allocator.Persistent);
 
         for (int i = 0; i < boidZoneSO.numOfBoids; i++)
         {
@@ -46,15 +46,12 @@ public class BoidZone : MonoBehaviour
             );
 
             GameObject boidObj = Instantiate(boidZoneSO.boidPrefab, randomPosition, Quaternion.identity, transform);
-            Boid boid = boidObj.GetComponent<Boid>();
-
-            boids.Add(boid);
-            transformAccessArray.Add(boid.transform);
+            transformAccessArray.Add(boidObj.transform);
 
             boidData[i] = new BoidData
             {
-                position = boid.transform.position,
-                velocity = (Vector3)boid.velocity
+                position = boidObj.transform.position,
+                velocity = Vector3.zero // Initialize with zero velocity;
             };
         }
     }
@@ -156,8 +153,6 @@ public class BoidZone : MonoBehaviour
 
     void FixedUpdate()
     {
-        NativeArray<BoidData> updatedData = new NativeArray<BoidData>(boidZoneSO.numOfBoids, Allocator.TempJob);
-
         BoidZoneJob job = new BoidZoneJob
         {
             boidData = boidData,
@@ -182,8 +177,6 @@ public class BoidZone : MonoBehaviour
         {
             boidData[i] = updatedData[i];
         }
-
-        updatedData.Dispose();
     }
 
     void OnDestroy()
@@ -193,5 +186,8 @@ public class BoidZone : MonoBehaviour
 
         if (transformAccessArray.isCreated)
             transformAccessArray.Dispose();
+
+        if (updatedData.IsCreated)
+            updatedData.Dispose();
     }
 }

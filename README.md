@@ -25,9 +25,6 @@
 - Boids
 - Multithreaded Programming (Job System)
 - Burst Compiler
-- Morton Code
-- Quadtree
-- A* pathfinding
 - DOTween
 - Optimization (Profiler)
 - Debugging (Gizmo)
@@ -38,6 +35,9 @@
 - Unity MCP
 
 ### Ongoing features
+- Morton Code
+- Quadtree
+- A* pathfinding
 - Raycast
 - Audio Mixer
 - Addressable

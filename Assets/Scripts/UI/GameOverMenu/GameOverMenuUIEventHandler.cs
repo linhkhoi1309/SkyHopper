@@ -25,7 +25,7 @@ public class GameOverMenuUIEventHandler : MonoBehaviour
     private void Awake()
     {
         uIDocument = GetComponent<UIDocument>();
-        adsManager = FindObjectOfType<AdsManager>();
+        adsManager = FindFirstObjectByType<AdsManager>();
     }
     void Start()
     {
@@ -102,7 +102,7 @@ public class GameOverMenuUIEventHandler : MonoBehaviour
         if (currentLevel != null) {
             var binding = levelNameLabel.GetBinding("text") as LocalizedString;
             var levelName = binding["level"] as StringVariable;
-            levelName.Value = int.Parse(currentLevel.LevelName).ToString("D3");
+            levelName.Value = currentLevel.Id.ToString("D3");
         }
     }
 

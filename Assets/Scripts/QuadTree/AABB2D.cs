@@ -1,13 +1,10 @@
 using System;
 using Unity.Mathematics;
 
-namespace NativeQuadTree
-{
 	[Serializable]
 	public struct AABB2D {
 		public float2 Center;
 		public float2 Extents;
-
 		public float2 Size => Extents * 2;
 		public float2 Min => Center - Extents;
 		public float2 Max => Center + Extents;
@@ -56,4 +53,3 @@ namespace NativeQuadTree
 			       (math.abs(Center[1] - b.Center[1]) < (Extents[1] + b.Extents[1]));
 		}
 	}
-}

@@ -16,10 +16,7 @@ public class DatabaseManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else
-        {
-            Destroy(gameObject);
-        }
+        else Destroy(gameObject);
     }
 
     void Start()
@@ -38,9 +35,7 @@ public class DatabaseManager : MonoBehaviour
             #if UNITY_ANDROID
             UnityWebRequest loadDb = UnityWebRequest.Get(streamingPath);
             loadDb.SendWebRequest();
-            while (!loadDb.isDone) {
-                yield return new WaitForEndOfFrame();
-            }
+            while (!loadDb.isDone) {}
             File.WriteAllBytes(persistentPath, loadDb.downloadHandler.data);
             #else
             File.Copy(streamingPath, persistentPath);

@@ -54,9 +54,10 @@ public class FinishingLine : MonoBehaviour
         {
             AudioManager.instance.PlaySound(AudioManager.instance.completeSound);
             player.hasCompleted = true;
-            DatabaseManager.Instance.UpdateLevelCompletion(GameManager.instance.currentLevelId, true);
-            if (GameManager.instance.currentLevelId + 1 <= GameManager.instance.levels.Count)
-                DatabaseManager.Instance.UpdateLevelUnlockStatus(GameManager.instance.currentLevelId + 1, true);
+            int currentLevelId = GameManager.instance.currentLevelId;
+            DatabaseManager.Instance.UpdateLevelCompletion(currentLevelId, true);
+            if (currentLevelId + 1 <= GameManager.instance.levels.Count)
+                DatabaseManager.Instance.UpdateLevelUnlockStatus(currentLevelId + 1, true);
             GameManager.instance.GameOver();
         }
     }
