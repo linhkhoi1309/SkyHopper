@@ -50,14 +50,14 @@
 
 ### Level Design
 
-# Easy
+#### Easy
 - Level 1: Spinning Circle + Ping Pong
 - Level 2: Trapdoor + Fan
 - Level 3: Clockhand + Spaceship
 - Level 4: Boidzone
 - Level 5: Dual Shooter + Dual Flow/Stream
 
-# Medium
+#### Medium
 - Level 6: Balloons + Dual Homing Missles
 - Level 7: 
 - Level 8:
@@ -68,7 +68,7 @@
 - Level 13:
 - Level 14:
 - Level 15:
-# Hard
+#### Hard
 - Level 16:
 - Level 17:
 - Level 18:
