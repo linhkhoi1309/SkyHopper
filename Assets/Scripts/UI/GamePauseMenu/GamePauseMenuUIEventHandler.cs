@@ -21,7 +21,7 @@ public class GamePauseMenuUIEventHandler : MonoBehaviour
     Player player;
 
     private void Awake() {
-        player = FindObjectOfType<Player>();
+        player = FindFirstObjectByType<Player>();
     }
 
     private void Start()

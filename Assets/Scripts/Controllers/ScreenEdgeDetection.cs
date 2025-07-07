@@ -8,7 +8,7 @@ public class ScreenEdgeDetection : MonoBehaviour
 
     private void Start()
     {
-        player = FindObjectOfType<Player>();
+        player = FindFirstObjectByType<Player>();
     }
 
     void Update()

@@ -30,7 +30,7 @@
 - Save & Loading System (SQLite-net + StreammingAssets, PlayerPrefs)
 - Google Admob + In-App purchase + Monetization & Tracking tools
 - Localization
-- Unity MCP
+- Unity MCP + Cursor
 
 ### Ongoing features
 - Morton Code
@@ -50,12 +50,30 @@
 
 ### Level Design
 
+# Easy
 - Level 1: Spinning Circle + Ping Pong
 - Level 2: Trapdoor + Fan
 - Level 3: Clockhand + Spaceship
 - Level 4: Boidzone
 - Level 5: Dual Shooter + Dual Flow/Stream
-- Level 6: Balloons + 
+
+# Medium
+- Level 6: Balloons + Dual Homing Missles
+- Level 7: 
+- Level 8:
+- Level 9:
+- Level 10:
+- Level 11:
+- Level 12:
+- Level 13:
+- Level 14:
+- Level 15:
+# Hard
+- Level 16:
+- Level 17:
+- Level 18:
+- Level 19:
+- Level 20:
 
 ### Notes
 - URP Setup:
@@ -102,6 +120,7 @@
 - [DOTween, Documentation](https://dotween.demigiant.com/documentation.php)
 - [Unity Localization: Add support for Multiple Languages, Root Games](https://www.youtube.com/watch?v=qcXuvd7qSxg)
 - [Mobile Ads SDK(Unity), Google Admob](https://developers.google.com/admob/unity/quick-start)
+- [Unity MCP, Justin P Barnett](https://github.com/justinpbarnett/unity-mcp)
 - [Audios](https://opengameart.org/)
 - [Fonts](https://fonts.google.com/)
 - [Sprites](https://www.kenney.nl/assets)

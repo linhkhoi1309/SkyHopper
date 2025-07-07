@@ -81,6 +81,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -164,14 +167,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationPoint: {fileID: 4413225322350966607}
   shootingPoint: {fileID: 1796525293898093817}
-  initialDirectionVector: {x: 0, y: 0, z: 0}
   canRotate: 1
   maxAngle: -65
   minAngle: 65
   intervalBetweenShots: 0.2
+  intervalBetweenShotsVariation: 0
   intervalBetweenTurns: 0.6
-  rotateSpeed: 7
+  intervalBetweenTurnsVariation: 0
+  rotationSpeed: 20
+  rotationSpeedVariation: 15
   numberOfConcurrentShots: 3
+  numberOfConcurrentShotsVariation: 0
   hasLaserBeam: 0
   laserMaterial: {fileID: 0}
   ammoPrefab: {fileID: 6801923149617864279, guid: 05c3b27d37e7d4c4fa2a2f566dbf6902, type: 3}
@@ -224,6 +230,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

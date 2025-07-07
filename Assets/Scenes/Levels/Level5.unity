@@ -188,25 +188,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 682799372076208688, guid: 0ed8b4c7c1a660e44aad24d7c4b8847b, type: 3}
-      propertyPath: canRotate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 682799372076208688, guid: 0ed8b4c7c1a660e44aad24d7c4b8847b, type: 3}
-      propertyPath: rotationSpeed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 682799372076208688, guid: 0ed8b4c7c1a660e44aad24d7c4b8847b, type: 3}
-      propertyPath: rotationSpeedVariation
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 3657908569182492320, guid: 0ed8b4c7c1a660e44aad24d7c4b8847b, type: 3}
       propertyPath: m_Name
       value: Shooter
-      objectReference: {fileID: 0}
-    - target: {fileID: 3657908569182492320, guid: 0ed8b4c7c1a660e44aad24d7c4b8847b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8048955344721227469, guid: 0ed8b4c7c1a660e44aad24d7c4b8847b, type: 3}
       propertyPath: m_LocalPosition.x

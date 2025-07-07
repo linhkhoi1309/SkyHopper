@@ -52,11 +52,11 @@ public class Shooter : MonoBehaviour
     [Min(0)]
     [SerializeField] int numberOfConcurrentShotsVariation = 0;
 
+    [SerializeField] GameObject ammoPrefab;
+
     [SerializeField] bool hasLaserBeam = false;
 
     [SerializeField] Material laserMaterial;
-
-    [SerializeField] GameObject ammoPrefab;
 
     private void Start()
     {
@@ -79,10 +79,17 @@ public class Shooter : MonoBehaviour
                     yield return null;
                 }
             }
-            StartCoroutine(ShootAmmoRoutine());
+            if(hasLaserBeam) StartCoroutine(ShootLaserRoutine());
+            else StartCoroutine(ShootAmmoRoutine());
             yield return new WaitForSeconds(currentIntervalBetweenTurns);
         }
     }
+
+    IEnumerator ShootLaserRoutine()
+    {
+        yield return new WaitForSeconds(GetIntervalBetweenTurns());
+    }
+
     IEnumerator ShootAmmoRoutine()
     {
         int currentNumberOfConcurrentShots = GetNumberOfConcurrentShots();
