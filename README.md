@@ -2,6 +2,9 @@
 
 #### This game is served for ***educational purposes*** only. Please contact to *linhkhoiluong@gmail.com* before using it as references.
 ---
+
+### Description
+A fast-paced vertical arcade game where you control a bouncing ball by tapping the screen. Each tap propels the ball upward as you navigate through a series of challenging obstacles. Time your taps carefully to avoid hazards and reach the top.
 ### Techniques used
 
 - Version Control (Git)
@@ -33,9 +36,7 @@
 - Unity MCP + Cursor
 
 ### Ongoing features
-- Morton Code
-- Quadtree
-- A* pathfinding
+- Optimazation: Morton Code + Quadtree
 - Raycast
 - Audio Mixer
 - Addressable
@@ -47,19 +48,20 @@
 - Scene Transition 
 - Text Animation
 - Mobile Native API (Push Notifications, Vibration, Accelerometer)
+- Infinite Mode
 
 ### Level Design
 
 #### Easy
-- Level 1: Spinning Circle + Ping Pong
-- Level 2: Trapdoor + Fan
-- Level 3: Clockhand + Spaceship
-- Level 4: Boidzone
-- Level 5: Dual Shooter + Dual Flow/Stream
+- Level 1: Circular Line (spin speed: 40) + Ping Pong (speed : 8)
+- Level 2: Wall Crusher (speed: 8)  + Dual Fan (spin speed: 40)
+- Level 3: Clockhand (spin speed: 40) + Spaceship (speed: 3)
+- Level 4: Boidzone (min speed: 5, max speed: 7, num: 20)
+- Level 5: Dual Ammo Shooter (spin speed: 20, ammo speed: 10, ammo range: 7) + Dual Flow/Stream (speed: 6)
 
 #### Medium
-- Level 6: Balloons + Dual Homing Missles
-- Level 7: 
+- Level 6: Balloons (scale duration: 1, scale delay: 0.5) + Dual Homing Missles (speed: 4, spin speed: 200, lifetime: 2.5, detection range: 10, activation delay:  0.5)
+- Level 7: Trapdoor (spin speed: 100, angular: 90 - 270 deg, ping pong) + Ball & Chain (force: 50) +  Circular Line (spin speed: 50, navigated) 
 - Level 8:
 - Level 9:
 - Level 10:
@@ -105,6 +107,12 @@
     + Unity UI Toolkit: UI Builder -> Text -> Add bindings (only available in Unity 6+)
     + Unity UI: Add Localize String Event component -> Set string reference -> Set update string (object: Text Object, function: TextMeshProUGUI.text) 
     + Must create addressable build: Window -> Asset Management -> Addressable -> Groups -> New Build
+
+- Path:
+    + Path_0, Path_1 : Flow/Stream
+    + Path_2, Path_3: Ping Pong
+    + Path_4, Path_5: Wall Crusher
+    + Path_6: Spaceship
 
 ### References
 - [SCREEN SHAKE in Unity using Cinemachine, Sasquatch B Studios](https://www.youtube.com/watch?v=CgyLIWyDXqo&list=PLfmYNuLHEy-PQ6j6kki9kmM3Z5CayRSI0&index=4&ab_channel=SasquatchBStudios)

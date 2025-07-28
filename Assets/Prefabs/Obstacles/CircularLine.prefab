@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6049108889221544354}
   - component: {fileID: 7811505907186574644}
   m_Layer: 0
-  m_Name: SpinningObstacle
+  m_Name: CircularLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

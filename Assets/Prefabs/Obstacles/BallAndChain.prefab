@@ -51,6 +51,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -94,6 +97,7 @@ PolygonCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 403577207513356403}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -117,7 +121,8 @@ PolygonCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,6 +209,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -241,7 +249,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!50 &2021803814277903211
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -252,8 +260,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 5
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -283,6 +291,7 @@ HingeJoint2D:
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.46}
   m_ConnectedAnchor: {x: 0.17026049, y: -0.00000021582063}
+  m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -299,6 +308,7 @@ CircleCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 456151362051892647}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -322,9 +332,9 @@ CircleCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.0000009536743}
-  serializedVersion: 2
   m_Radius: 0.5
 --- !u!114 &5033882398996955273
 MonoBehaviour:
@@ -389,6 +399,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -432,6 +445,7 @@ PolygonCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049206916355935712}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -455,7 +469,8 @@ PolygonCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -519,7 +534,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &4187824176282348121
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -530,8 +545,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 2
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -561,6 +576,7 @@ HingeJoint2D:
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.27566797, y: -0.0000005284818}
+  m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -604,7 +620,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1690601781316577416
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -615,8 +631,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 2
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -646,6 +662,7 @@ HingeJoint2D:
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.2644763, y: 0.000000034924597}
+  m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -689,7 +706,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &2713237585988706961
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -700,8 +717,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 2
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -731,6 +748,7 @@ HingeJoint2D:
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.29259983, y: 0.000000255648}
+  m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -774,7 +792,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!50 &292111416651213766
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -785,8 +803,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -816,6 +834,7 @@ HingeJoint2D:
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.025394432, y: 3.6738584}
+  m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -859,7 +878,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &2135936731678386027
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -870,8 +889,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 2
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -901,6 +920,7 @@ HingeJoint2D:
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
+  m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -918,6 +938,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4336316107896339230}
+  - component: {fileID: 6477368378561615691}
   m_Layer: 0
   m_Name: BallAndChain
   m_TagString: Untagged
@@ -942,6 +963,21 @@ Transform:
   - {fileID: 1365891014576668794}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6477368378561615691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2732548360018382645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754abe2c673eeb74e84191f980e00f9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchor: {fileID: 1626490612001678003}
+  ballRigidbody: {fileID: 2021803814277903211}
+  swingForce: 50
 --- !u!1 &3907616694963812410
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,7 +1013,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &6679461355883045106
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -988,8 +1024,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 2
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1019,6 +1055,7 @@ HingeJoint2D:
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.3037979, y: 0.000000013279427}
+  m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1062,7 +1099,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &365114223877429744
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1073,8 +1110,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 2
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1104,6 +1141,7 @@ HingeJoint2D:
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.2757249, y: -0.00000052619714}
+  m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1147,7 +1185,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &3259501764221972067
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1158,8 +1196,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 2
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1189,6 +1227,7 @@ HingeJoint2D:
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.30384976, y: 0.000000845175}
+  m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1262,6 +1301,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1365,7 +1407,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &6463894872868481054
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1376,8 +1418,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 2
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1407,6 +1449,7 @@ HingeJoint2D:
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.3319743, y: 0.00000045821074}
+  m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1450,7 +1493,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &2676335648738728184
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1461,8 +1504,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 2
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1492,6 +1535,7 @@ HingeJoint2D:
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.32067528, y: -0.00000059163347}
+  m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1535,7 +1579,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &5338303094261759608
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1546,8 +1590,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 2
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1577,6 +1621,7 @@ HingeJoint2D:
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.29254568, y: -0.00000092881476}
+  m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1636,6 +1681,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1679,6 +1727,7 @@ PolygonCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8636755507838966904}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1702,7 +1751,8 @@ PolygonCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -1766,7 +1816,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &3106784939065637505
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1777,8 +1827,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 2
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1808,6 +1858,7 @@ HingeJoint2D:
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.28135043, y: -0.0000012130473}
+  m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1851,7 +1902,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &3698986158775371433
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1862,8 +1913,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 2
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1893,6 +1944,7 @@ HingeJoint2D:
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.30942345, y: 0.000001156996}
+  m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1952,6 +2004,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1995,6 +2050,7 @@ PolygonCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8768457169934825958}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -2018,7 +2074,8 @@ PolygonCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -2098,6 +2155,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2141,6 +2201,7 @@ PolygonCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8811239601143346900}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -2164,7 +2225,8 @@ PolygonCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -2228,7 +2290,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1455341928458452812
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2239,8 +2301,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 2
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -2270,6 +2332,7 @@ HingeJoint2D:
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.30942267, y: 0.000000013525294}
+  m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2313,7 +2376,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &7085535256034681880
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2324,8 +2387,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 2
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -2355,6 +2418,7 @@ HingeJoint2D:
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.26441634, y: -0.00000083950584}
+  m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
