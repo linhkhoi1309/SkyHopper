@@ -8,6 +8,8 @@ public class AdsManager : MonoBehaviour
     string rewardedId = "ca-app-pub-3250131709892528/1177189569";
     #elif UNITY_IPHONE
     string rewardedId = "ca-app-pub-3940256099942544/1712485313";
+    #elif UNITY_EDITOR
+    string rewardedId = "unused";
     #endif
     RewardedAd rewardedAd;
     public event Action OnRewardedAdClosedEvent;
